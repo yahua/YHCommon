@@ -36,10 +36,80 @@ Pod::Spec.new do |s|
 
 
 
-  s.source_files  = "YHCommon/**/*.{h,m}"
+  s.source_files  = "YHCommon/YHCommon.h"
   
   s.frameworks = "Foundation", "UIKit"
 
- 
+ pch_AF = <<-EOS
+#ifndef TARGET_OS_IOS
+  #define TARGET_OS_IOS TARGET_OS_IPHONE
+#endif
+#ifndef TARGET_OS_WATCH
+  #define TARGET_OS_WATCH 0
+#endif
+#ifndef TARGET_OS_TV
+  #define TARGET_OS_TV 0
+#endif
+EOS
+  s.prefix_header_contents = pch_AF
+  
+  s.ios.deployment_target = '7.0'
+  
+  s.subspec 'YHKVOController' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/YHKVOController/*.h'
+    ss.source_files = 'YHCommon/YHKVOController'
+  end
+
+  s.subspec 'NSData' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/NSData/*.h'
+    ss.source_files = 'YHCommon/NSData'
+  end
+
+  s.subspec 'NSDate' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/NSDate/*.h'
+    ss.source_files = 'YHCommon/NSDate'
+  end
+
+  s.subspec 'NSString' do |ss|
+    ss.ios.deployment_target = '7.0'
+    ss.dependency 'YHCommon/NSData'
+
+    ss.public_header_files = 'YHCommon/NSString/*.h'
+    ss.source_files = 'YHCommon/NSString'
+  end
+
+  s.subspec 'UIButton' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/UIButton/*.h'
+    ss.source_files = 'YHCommon/UIButton'
+  end
+
+  s.subspec 'UIColor' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/UIColor/*.h'
+    ss.source_files = 'YHCommon/UIColor'
+  end
+
+  s.subspec 'UIDevice' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/UIDevice/*.h'
+    ss.source_files = 'YHCommon/UIDevice'
+  end
+
+  s.subspec 'UIImage' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/UIImage/*.h'
+    ss.source_files = 'YHCommon/UIImage'
+  end
 
 end

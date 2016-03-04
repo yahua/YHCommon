@@ -15,6 +15,22 @@
 		194F79EB1C882A6F00599CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194F79E91C882A6F00599CCB /* LaunchScreen.storyboard */; };
 		194F79F61C882A6F00599CCB /* YHCommonDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 194F79F51C882A6F00599CCB /* YHCommonDemoTests.m */; };
 		194F7A011C882A6F00599CCB /* YHCommonDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 194F7A001C882A6F00599CCB /* YHCommonDemoUITests.m */; };
+		196221E31C8927A70056384E /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221C01C8927A70056384E /* NSData+Base64.m */; };
+		196221E41C8927A70056384E /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221C31C8927A70056384E /* NSDate+Utilities.m */; };
+		196221E51C8927A70056384E /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221C61C8927A70056384E /* NSString+Base64.m */; };
+		196221E61C8927A70056384E /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221C81C8927A70056384E /* NSString+Contains.m */; };
+		196221E71C8927A70056384E /* NSString+RegexCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221CA1C8927A70056384E /* NSString+RegexCategory.m */; };
+		196221E81C8927A70056384E /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221CC1C8927A70056384E /* NSString+Size.m */; };
+		196221E91C8927A70056384E /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221CF1C8927A70056384E /* UIButton+Block.m */; };
+		196221EA1C8927A70056384E /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221D21C8927A70056384E /* UIColor+HEX.m */; };
+		196221EB1C8927A70056384E /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221D51C8927A70056384E /* UIDevice+Hardware.m */; };
+		196221EC1C8927A70056384E /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221D81C8927A70056384E /* UIImage+Blur.m */; };
+		196221ED1C8927A70056384E /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221DA1C8927A70056384E /* UIImage+Color.m */; };
+		196221EE1C8927A70056384E /* UIImage+FileName.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221DC1C8927A70056384E /* UIImage+FileName.m */; };
+		196221EF1C8927A70056384E /* UIImage+FX.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221DE1C8927A70056384E /* UIImage+FX.m */; };
+		196221F01C8927A70056384E /* UIImage+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221E01C8927A70056384E /* UIImage+Orientation.m */; };
+		196221F11C8927A70056384E /* UIImage+SuperCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221E21C8927A70056384E /* UIImage+SuperCompress.m */; };
+		19FF5FA31C88588F00F67164 /* YHKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FF5FA21C88588F00F67164 /* YHKVOController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +67,39 @@
 		194F79FC1C882A6F00599CCB /* YHCommonDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YHCommonDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		194F7A001C882A6F00599CCB /* YHCommonDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHCommonDemoUITests.m; sourceTree = "<group>"; };
 		194F7A021C882A7000599CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		196221BF1C8927A70056384E /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		196221C01C8927A70056384E /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		196221C21C8927A70056384E /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		196221C31C8927A70056384E /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		196221C51C8927A70056384E /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		196221C61C8927A70056384E /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		196221C71C8927A70056384E /* NSString+Contains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Contains.h"; sourceTree = "<group>"; };
+		196221C81C8927A70056384E /* NSString+Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Contains.m"; sourceTree = "<group>"; };
+		196221C91C8927A70056384E /* NSString+RegexCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RegexCategory.h"; sourceTree = "<group>"; };
+		196221CA1C8927A70056384E /* NSString+RegexCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegexCategory.m"; sourceTree = "<group>"; };
+		196221CB1C8927A70056384E /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		196221CC1C8927A70056384E /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		196221CE1C8927A70056384E /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
+		196221CF1C8927A70056384E /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
+		196221D11C8927A70056384E /* UIColor+HEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
+		196221D21C8927A70056384E /* UIColor+HEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HEX.m"; sourceTree = "<group>"; };
+		196221D41C8927A70056384E /* UIDevice+Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Hardware.h"; sourceTree = "<group>"; };
+		196221D51C8927A70056384E /* UIDevice+Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Hardware.m"; sourceTree = "<group>"; };
+		196221D71C8927A70056384E /* UIImage+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blur.h"; sourceTree = "<group>"; };
+		196221D81C8927A70056384E /* UIImage+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blur.m"; sourceTree = "<group>"; };
+		196221D91C8927A70056384E /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		196221DA1C8927A70056384E /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		196221DB1C8927A70056384E /* UIImage+FileName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FileName.h"; sourceTree = "<group>"; };
+		196221DC1C8927A70056384E /* UIImage+FileName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FileName.m"; sourceTree = "<group>"; };
+		196221DD1C8927A70056384E /* UIImage+FX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FX.h"; sourceTree = "<group>"; };
+		196221DE1C8927A70056384E /* UIImage+FX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FX.m"; sourceTree = "<group>"; };
+		196221DF1C8927A70056384E /* UIImage+Orientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Orientation.h"; sourceTree = "<group>"; };
+		196221E01C8927A70056384E /* UIImage+Orientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Orientation.m"; sourceTree = "<group>"; };
+		196221E11C8927A70056384E /* UIImage+SuperCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SuperCompress.h"; sourceTree = "<group>"; };
+		196221E21C8927A70056384E /* UIImage+SuperCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SuperCompress.m"; sourceTree = "<group>"; };
+		19FF5FA11C88588F00F67164 /* YHKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHKVOController.h; sourceTree = "<group>"; };
+		19FF5FA21C88588F00F67164 /* YHKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHKVOController.m; sourceTree = "<group>"; };
+		19FF5FA41C8858A200F67164 /* YHCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHCommon.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +150,7 @@
 		194F79DA1C882A6F00599CCB /* YHCommonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				19FF5F9F1C88588E00F67164 /* YHCommon */,
 				194F79DE1C882A6F00599CCB /* AppDelegate.h */,
 				194F79DF1C882A6F00599CCB /* AppDelegate.m */,
 				194F79E11C882A6F00599CCB /* ViewController.h */,
@@ -138,6 +188,111 @@
 				194F7A021C882A7000599CCB /* Info.plist */,
 			);
 			path = YHCommonDemoUITests;
+			sourceTree = "<group>";
+		};
+		196221BE1C8927A70056384E /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				196221BF1C8927A70056384E /* NSData+Base64.h */,
+				196221C01C8927A70056384E /* NSData+Base64.m */,
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
+		196221C11C8927A70056384E /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				196221C21C8927A70056384E /* NSDate+Utilities.h */,
+				196221C31C8927A70056384E /* NSDate+Utilities.m */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		196221C41C8927A70056384E /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				196221C51C8927A70056384E /* NSString+Base64.h */,
+				196221C61C8927A70056384E /* NSString+Base64.m */,
+				196221C71C8927A70056384E /* NSString+Contains.h */,
+				196221C81C8927A70056384E /* NSString+Contains.m */,
+				196221C91C8927A70056384E /* NSString+RegexCategory.h */,
+				196221CA1C8927A70056384E /* NSString+RegexCategory.m */,
+				196221CB1C8927A70056384E /* NSString+Size.h */,
+				196221CC1C8927A70056384E /* NSString+Size.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		196221CD1C8927A70056384E /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				196221CE1C8927A70056384E /* UIButton+Block.h */,
+				196221CF1C8927A70056384E /* UIButton+Block.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		196221D01C8927A70056384E /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				196221D11C8927A70056384E /* UIColor+HEX.h */,
+				196221D21C8927A70056384E /* UIColor+HEX.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		196221D31C8927A70056384E /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				196221D41C8927A70056384E /* UIDevice+Hardware.h */,
+				196221D51C8927A70056384E /* UIDevice+Hardware.m */,
+			);
+			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		196221D61C8927A70056384E /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				196221D71C8927A70056384E /* UIImage+Blur.h */,
+				196221D81C8927A70056384E /* UIImage+Blur.m */,
+				196221D91C8927A70056384E /* UIImage+Color.h */,
+				196221DA1C8927A70056384E /* UIImage+Color.m */,
+				196221DB1C8927A70056384E /* UIImage+FileName.h */,
+				196221DC1C8927A70056384E /* UIImage+FileName.m */,
+				196221DD1C8927A70056384E /* UIImage+FX.h */,
+				196221DE1C8927A70056384E /* UIImage+FX.m */,
+				196221DF1C8927A70056384E /* UIImage+Orientation.h */,
+				196221E01C8927A70056384E /* UIImage+Orientation.m */,
+				196221E11C8927A70056384E /* UIImage+SuperCompress.h */,
+				196221E21C8927A70056384E /* UIImage+SuperCompress.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		19FF5F9F1C88588E00F67164 /* YHCommon */ = {
+			isa = PBXGroup;
+			children = (
+				196221BE1C8927A70056384E /* NSData */,
+				196221C11C8927A70056384E /* NSDate */,
+				196221C41C8927A70056384E /* NSString */,
+				196221CD1C8927A70056384E /* UIButton */,
+				196221D01C8927A70056384E /* UIColor */,
+				196221D31C8927A70056384E /* UIDevice */,
+				196221D61C8927A70056384E /* UIImage */,
+				19FF5FA01C88588F00F67164 /* YHKVOController */,
+				19FF5FA41C8858A200F67164 /* YHCommon.h */,
+			);
+			name = YHCommon;
+			path = ../../YHCommon;
+			sourceTree = "<group>";
+		};
+		19FF5FA01C88588F00F67164 /* YHKVOController */ = {
+			isa = PBXGroup;
+			children = (
+				19FF5FA11C88588F00F67164 /* YHKVOController.h */,
+				19FF5FA21C88588F00F67164 /* YHKVOController.m */,
+			);
+			path = YHKVOController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +425,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				196221F01C8927A70056384E /* UIImage+Orientation.m in Sources */,
+				196221E61C8927A70056384E /* NSString+Contains.m in Sources */,
+				196221EA1C8927A70056384E /* UIColor+HEX.m in Sources */,
 				194F79E31C882A6F00599CCB /* ViewController.m in Sources */,
+				196221E41C8927A70056384E /* NSDate+Utilities.m in Sources */,
+				19FF5FA31C88588F00F67164 /* YHKVOController.m in Sources */,
+				196221E81C8927A70056384E /* NSString+Size.m in Sources */,
+				196221E31C8927A70056384E /* NSData+Base64.m in Sources */,
 				194F79E01C882A6F00599CCB /* AppDelegate.m in Sources */,
+				196221EF1C8927A70056384E /* UIImage+FX.m in Sources */,
+				196221EC1C8927A70056384E /* UIImage+Blur.m in Sources */,
+				196221E91C8927A70056384E /* UIButton+Block.m in Sources */,
+				196221EE1C8927A70056384E /* UIImage+FileName.m in Sources */,
 				194F79DD1C882A6F00599CCB /* main.m in Sources */,
+				196221E51C8927A70056384E /* NSString+Base64.m in Sources */,
+				196221ED1C8927A70056384E /* UIImage+Color.m in Sources */,
+				196221EB1C8927A70056384E /* UIDevice+Hardware.m in Sources */,
+				196221F11C8927A70056384E /* UIImage+SuperCompress.m in Sources */,
+				196221E71C8927A70056384E /* NSString+RegexCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +585,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YHCommonDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nd.YHCommonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +597,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YHCommonDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nd.YHCommonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +671,7 @@
 				194F7A071C882A7000599CCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		194F7A081C882A7000599CCB /* Build configuration list for PBXNativeTarget "YHCommonDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +680,7 @@
 				194F7A0A1C882A7000599CCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		194F7A0B1C882A7000599CCB /* Build configuration list for PBXNativeTarget "YHCommonDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +689,7 @@
 				194F7A0D1C882A7000599CCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
