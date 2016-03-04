@@ -15,6 +15,8 @@
 		194F79EB1C882A6F00599CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194F79E91C882A6F00599CCB /* LaunchScreen.storyboard */; };
 		194F79F61C882A6F00599CCB /* YHCommonDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 194F79F51C882A6F00599CCB /* YHCommonDemoTests.m */; };
 		194F7A011C882A6F00599CCB /* YHCommonDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 194F7A001C882A6F00599CCB /* YHCommonDemoUITests.m */; };
+		195AB0E11C89305C000E35AB /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AB0E01C89305C000E35AB /* NSString+MD5.m */; };
+		195AB0E41C8930EB000E35AB /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AB0E31C8930EB000E35AB /* NSData+MD5.m */; };
 		196221E31C8927A70056384E /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221C01C8927A70056384E /* NSData+Base64.m */; };
 		196221E41C8927A70056384E /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221C31C8927A70056384E /* NSDate+Utilities.m */; };
 		196221E51C8927A70056384E /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221C61C8927A70056384E /* NSString+Base64.m */; };
@@ -67,6 +69,10 @@
 		194F79FC1C882A6F00599CCB /* YHCommonDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YHCommonDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		194F7A001C882A6F00599CCB /* YHCommonDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHCommonDemoUITests.m; sourceTree = "<group>"; };
 		194F7A021C882A7000599CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195AB0DF1C89305C000E35AB /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		195AB0E01C89305C000E35AB /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		195AB0E21C8930EB000E35AB /* NSData+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MD5.h"; sourceTree = "<group>"; };
+		195AB0E31C8930EB000E35AB /* NSData+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MD5.m"; sourceTree = "<group>"; };
 		196221BF1C8927A70056384E /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		196221C01C8927A70056384E /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		196221C21C8927A70056384E /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
@@ -195,6 +201,8 @@
 			children = (
 				196221BF1C8927A70056384E /* NSData+Base64.h */,
 				196221C01C8927A70056384E /* NSData+Base64.m */,
+				195AB0E21C8930EB000E35AB /* NSData+MD5.h */,
+				195AB0E31C8930EB000E35AB /* NSData+MD5.m */,
 			);
 			path = NSData;
 			sourceTree = "<group>";
@@ -219,6 +227,8 @@
 				196221CA1C8927A70056384E /* NSString+RegexCategory.m */,
 				196221CB1C8927A70056384E /* NSString+Size.h */,
 				196221CC1C8927A70056384E /* NSString+Size.m */,
+				195AB0DF1C89305C000E35AB /* NSString+MD5.h */,
+				195AB0E01C89305C000E35AB /* NSString+MD5.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -426,7 +436,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				196221F01C8927A70056384E /* UIImage+Orientation.m in Sources */,
+				195AB0E41C8930EB000E35AB /* NSData+MD5.m in Sources */,
 				196221E61C8927A70056384E /* NSString+Contains.m in Sources */,
+				195AB0E11C89305C000E35AB /* NSString+MD5.m in Sources */,
 				196221EA1C8927A70056384E /* UIColor+HEX.m in Sources */,
 				194F79E31C882A6F00599CCB /* ViewController.m in Sources */,
 				196221E41C8927A70056384E /* NSDate+Utilities.m in Sources */,

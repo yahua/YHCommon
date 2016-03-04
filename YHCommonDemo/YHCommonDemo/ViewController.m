@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NSString+MD5.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSString *test = @"1234";
+    NSLog(@"%@", [test MD5]);
 }
 
 - (void)didReceiveMemoryWarning {
