@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.requires_arc = true
 
-  s.source       = { :git => "https://github.com/yahua/YHCommon.git"}
+  s.source       = { :git => "https://github.com/yahua/YHCommon.git", :tag => "0.0.1" }
 
 
 
