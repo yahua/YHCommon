@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (MD5)
+@interface NSString (hash)
 
 - (NSString *)MD5;
+
+- (NSString *)hmacSha1WithKey:(NSString*)key;
 
 @end

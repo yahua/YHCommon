@@ -6,10 +6,12 @@
 //  Copyright © 2016年 wangsw. All rights reserved.
 //
 
-#import "NSString+MD5.h"
+#import "NSString+hash.h"
 #import "NSData+MD5.h"
 
-@implementation NSString (MD5)
+#import <CommonCrypto/CommonCrypto.h>
+
+@implementation NSString (hash)
 
 - (NSString *)MD5
 {
@@ -41,6 +43,38 @@
     {
         return nil;
     }
+}
+
+- (NSString *)hmacSha1WithKey:(NSString*)key {
+    
+    const char *cKey  = [key cStringUsingEncoding:NSUTF8StringEncoding];
+    
+    const char *cData = [self cStringUsingEncoding:NSUTF8StringEncoding];
+    
+    
+    
+    uint8_t cHMAC[CC_SHA1_DIGEST_LENGTH];
+    
+    
+    
+    CCHmac(kCCHmacAlgSHA1, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
+    
+    
+    
+    //NSData *HMAC = [[NSData alloc] initWithBytes:cHMAC length:CC_SHA1_DIGEST_LENGTH];
+    
+    NSString *hash;
+    
+    NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
+    
+    for(int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++)
+        
+        [output appendFormat:@"%02x", cHMAC[i]];
+    
+    hash = output;
+    
+    
+    return hash;
 }
 
 @end
