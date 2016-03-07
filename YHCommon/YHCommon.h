@@ -10,37 +10,37 @@
 #define YHCommon_h
 
 //NSData
-#import "NSData/NSData+Base64.h"
-#import "NSData/NSData+MD5.h"
+#import "NSData+Base64.h"
+#import "NSData+MD5.h"
 
 //NSDate
-#import "NSDate/NSDate+Utilities.h"
+#import "NSDate+Utilities.h"
 
 //NSString
-#import "NSString/NSString+Base64.h"
-#import "NSString/NSString+Contains.h"
-#import "NSString/NSString+RegexCategory.h"
-#import "NSString/NSString+Size.h"
-#import "NSString/NSString+hash.h"
+#import "NSString+Base64.h"
+#import "NSString+Contains.h"
+#import "NSString+RegexCategory.h"
+#import "NSString+Size.h"
+#import "NSString+hash.h"
 
 //UIButton
-#import "UIButton/UIButton+Block.h"
+#import "UIButton+Block.h"
 
 //UIColor
-#import "UIColor/UIColor+HEX.h"
+#import "UIColor+HEX.h"
 
 //UIDevice
-#import "UIDevice/UIDevice+Hardware.h"
+#import "UIDevice+Hardware.h"
 
 //UIImage
-#import "UIImage/UIImage+Blur.h"
-#import "UIImage/UIImage+Color.h"
-#import "UIImage/UIImage+FileName.h"
-#import "UIImage/UIImage+FX.h"
-#import "UIImage/UIImage+Orientation.h"
-#import "UIImage/UIImage+SuperCompress.h"
+#import "UIImage+Blur.h"
+#import "UIImage+Color.h"
+#import "UIImage+FileName.h"
+#import "UIImage+FX.h"
+#import "UIImage+Orientation.h"
+#import "UIImage+SuperCompress.h"
 
 //YHKVOController
-#import "YHKVOController/YHKVOController.h"
+#import "YHKVOController.h"
 
 #endif /* YHCommon_h */
