@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "NSString+MD5.h"
+
+#import "YHCommon.h"
 
 @interface ViewController ()
 
