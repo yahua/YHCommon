@@ -16,11 +16,11 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YHCommon"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "App common file of YHCommon."
 
   s.description  = <<-DESC
-                   App common file with Pod
+                   App common file with Pod for APP
                    DESC
 
   s.homepage     = "https://github.com/yahua/YHCommon"
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.requires_arc = true
 
-  s.source       = { :git => "https://github.com/yahua/YHCommon.git", :tag => "0.0.5" }
+  s.source       = { :git => "https://github.com/yahua/YHCommon.git", :tag => "0.0.6" }
 
 
 
@@ -55,13 +55,6 @@ EOS
   
   s.ios.deployment_target = '7.0'
   
-  s.subspec 'YHKVOController' do |ss|
-    ss.ios.deployment_target = '7.0'
-
-    ss.public_header_files = 'YHCommon/YHKVOController/*.h'
-    ss.source_files = 'YHCommon/YHKVOController'
-  end
-
   s.subspec 'NSData' do |ss|
     ss.ios.deployment_target = '7.0'
 
@@ -84,11 +77,11 @@ EOS
     ss.source_files = 'YHCommon/NSString'
   end
 
-  s.subspec 'UIButton' do |ss|
+  s.subspec 'NSTimer' do |ss|
     ss.ios.deployment_target = '7.0'
 
-    ss.public_header_files = 'YHCommon/UIButton/*.h'
-    ss.source_files = 'YHCommon/UIButton'
+    ss.public_header_files = 'YHCommon/NSTimer/*.h'
+    ss.source_files = 'YHCommon/NSTimer'
   end
 
   s.subspec 'UIColor' do |ss|
@@ -110,6 +103,41 @@ EOS
 
     ss.public_header_files = 'YHCommon/UIImage/*.h'
     ss.source_files = 'YHCommon/UIImage'
+  end
+
+  s.subspec 'UIButton' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/UIButton/*.h'
+    ss.source_files = 'YHCommon/UIButton'
+  end
+
+  s.subspec 'UIAlertView' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/UIAlertView/*.h'
+    ss.source_files = 'YHCommon/UIAlertView'
+  end
+
+  s.subspec 'UILable' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/UILable/*.h'
+    ss.source_files = 'YHCommon/UILable'
+  end
+
+  s.subspec 'UITextField' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/UITextField/*.h'
+    ss.source_files = 'YHCommon/UITextField'
+  end
+
+  s.subspec 'YHKVOController' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/YHKVOController/*.h'
+    ss.source_files = 'YHCommon/YHKVOController'
   end
 
 end

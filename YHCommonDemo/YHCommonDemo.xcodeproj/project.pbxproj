@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		194A3A811C8E794D002AFECD /* NSTimer+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 194A3A711C8E794D002AFECD /* NSTimer+Addition.m */; };
+		194A3A821C8E794D002AFECD /* NSTimer+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 194A3A731C8E794D002AFECD /* NSTimer+Blocks.m */; };
+		194A3A831C8E794D002AFECD /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 194A3A761C8E794D002AFECD /* UIAlertView+Block.m */; };
+		194A3A841C8E794D002AFECD /* UILabel+AutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 194A3A791C8E794D002AFECD /* UILabel+AutoSize.m */; };
+		194A3A851C8E794D002AFECD /* UILabel+SuggestSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 194A3A7B1C8E794D002AFECD /* UILabel+SuggestSize.m */; };
+		194A3A861C8E794D002AFECD /* UITextField+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 194A3A7E1C8E794D002AFECD /* UITextField+Blocks.m */; };
+		194A3A871C8E794D002AFECD /* UITextField+Select.m in Sources */ = {isa = PBXBuildFile; fileRef = 194A3A801C8E794D002AFECD /* UITextField+Select.m */; };
 		194F79DD1C882A6F00599CCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 194F79DC1C882A6F00599CCB /* main.m */; };
 		194F79E01C882A6F00599CCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 194F79DF1C882A6F00599CCB /* AppDelegate.m */; };
 		194F79E31C882A6F00599CCB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 194F79E21C882A6F00599CCB /* ViewController.m */; };
@@ -53,6 +60,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		194A3A701C8E794D002AFECD /* NSTimer+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Addition.h"; sourceTree = "<group>"; };
+		194A3A711C8E794D002AFECD /* NSTimer+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Addition.m"; sourceTree = "<group>"; };
+		194A3A721C8E794D002AFECD /* NSTimer+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Blocks.h"; sourceTree = "<group>"; };
+		194A3A731C8E794D002AFECD /* NSTimer+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Blocks.m"; sourceTree = "<group>"; };
+		194A3A751C8E794D002AFECD /* UIAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Block.h"; sourceTree = "<group>"; };
+		194A3A761C8E794D002AFECD /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
+		194A3A781C8E794D002AFECD /* UILabel+AutoSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+AutoSize.h"; sourceTree = "<group>"; };
+		194A3A791C8E794D002AFECD /* UILabel+AutoSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AutoSize.m"; sourceTree = "<group>"; };
+		194A3A7A1C8E794D002AFECD /* UILabel+SuggestSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SuggestSize.h"; sourceTree = "<group>"; };
+		194A3A7B1C8E794D002AFECD /* UILabel+SuggestSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SuggestSize.m"; sourceTree = "<group>"; };
+		194A3A7D1C8E794D002AFECD /* UITextField+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Blocks.h"; sourceTree = "<group>"; };
+		194A3A7E1C8E794D002AFECD /* UITextField+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Blocks.m"; sourceTree = "<group>"; };
+		194A3A7F1C8E794D002AFECD /* UITextField+Select.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Select.h"; sourceTree = "<group>"; };
+		194A3A801C8E794D002AFECD /* UITextField+Select.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Select.m"; sourceTree = "<group>"; };
 		194F79D81C882A6F00599CCB /* YHCommonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHCommonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		194F79DC1C882A6F00599CCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		194F79DE1C882A6F00599CCB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +154,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		194A3A6F1C8E794D002AFECD /* NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				194A3A701C8E794D002AFECD /* NSTimer+Addition.h */,
+				194A3A711C8E794D002AFECD /* NSTimer+Addition.m */,
+				194A3A721C8E794D002AFECD /* NSTimer+Blocks.h */,
+				194A3A731C8E794D002AFECD /* NSTimer+Blocks.m */,
+			);
+			path = NSTimer;
+			sourceTree = "<group>";
+		};
+		194A3A741C8E794D002AFECD /* UIAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				194A3A751C8E794D002AFECD /* UIAlertView+Block.h */,
+				194A3A761C8E794D002AFECD /* UIAlertView+Block.m */,
+			);
+			path = UIAlertView;
+			sourceTree = "<group>";
+		};
+		194A3A771C8E794D002AFECD /* UILable */ = {
+			isa = PBXGroup;
+			children = (
+				194A3A781C8E794D002AFECD /* UILabel+AutoSize.h */,
+				194A3A791C8E794D002AFECD /* UILabel+AutoSize.m */,
+				194A3A7A1C8E794D002AFECD /* UILabel+SuggestSize.h */,
+				194A3A7B1C8E794D002AFECD /* UILabel+SuggestSize.m */,
+			);
+			path = UILable;
+			sourceTree = "<group>";
+		};
+		194A3A7C1C8E794D002AFECD /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				194A3A7D1C8E794D002AFECD /* UITextField+Blocks.h */,
+				194A3A7E1C8E794D002AFECD /* UITextField+Blocks.m */,
+				194A3A7F1C8E794D002AFECD /* UITextField+Select.h */,
+				194A3A801C8E794D002AFECD /* UITextField+Select.m */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
 		194F79CF1C882A6F00599CCB = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +345,10 @@
 		19FF5F9F1C88588E00F67164 /* YHCommon */ = {
 			isa = PBXGroup;
 			children = (
+				194A3A6F1C8E794D002AFECD /* NSTimer */,
+				194A3A741C8E794D002AFECD /* UIAlertView */,
+				194A3A771C8E794D002AFECD /* UILable */,
+				194A3A7C1C8E794D002AFECD /* UITextField */,
 				196221BE1C8927A70056384E /* NSData */,
 				196221C11C8927A70056384E /* NSDate */,
 				196221C41C8927A70056384E /* NSString */,
@@ -435,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				194A3A841C8E794D002AFECD /* UILabel+AutoSize.m in Sources */,
 				196221F01C8927A70056384E /* UIImage+Orientation.m in Sources */,
 				195AB0E41C8930EB000E35AB /* NSData+MD5.m in Sources */,
 				196221E61C8927A70056384E /* NSString+Contains.m in Sources */,
@@ -447,13 +515,19 @@
 				196221E31C8927A70056384E /* NSData+Base64.m in Sources */,
 				194F79E01C882A6F00599CCB /* AppDelegate.m in Sources */,
 				196221EF1C8927A70056384E /* UIImage+FX.m in Sources */,
+				194A3A871C8E794D002AFECD /* UITextField+Select.m in Sources */,
 				196221EC1C8927A70056384E /* UIImage+Blur.m in Sources */,
 				196221E91C8927A70056384E /* UIButton+Block.m in Sources */,
 				196221EE1C8927A70056384E /* UIImage+FileName.m in Sources */,
 				194F79DD1C882A6F00599CCB /* main.m in Sources */,
+				194A3A821C8E794D002AFECD /* NSTimer+Blocks.m in Sources */,
+				194A3A811C8E794D002AFECD /* NSTimer+Addition.m in Sources */,
 				196221E51C8927A70056384E /* NSString+Base64.m in Sources */,
 				196221ED1C8927A70056384E /* UIImage+Color.m in Sources */,
 				196221EB1C8927A70056384E /* UIDevice+Hardware.m in Sources */,
+				194A3A851C8E794D002AFECD /* UILabel+SuggestSize.m in Sources */,
+				194A3A831C8E794D002AFECD /* UIAlertView+Block.m in Sources */,
+				194A3A861C8E794D002AFECD /* UITextField+Blocks.m in Sources */,
 				196221F11C8927A70056384E /* UIImage+SuperCompress.m in Sources */,
 				196221E71C8927A70056384E /* NSString+RegexCategory.m in Sources */,
 			);
