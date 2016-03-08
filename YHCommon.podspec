@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YHCommon"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "App common file of YHCommon."
 
   s.description  = <<-DESC
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.requires_arc = true
 
-  s.source       = { :git => "https://github.com/yahua/YHCommon.git", :tag => "0.0.6" }
+  s.source       = { :git => "https://github.com/yahua/YHCommon.git", :tag => "0.0.7" }
 
 
 

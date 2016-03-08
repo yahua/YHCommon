@@ -23,8 +23,9 @@
 #import "NSString+Size.h"
 #import "NSString+hash.h"
 
-//UIButton
-#import "UIButton+Block.h"
+//NSStimer
+#import "NSTimer+Addition.h"
+#import "NSTimer+Blocks.h"
 
 //UIColor
 #import "UIColor+HEX.h"
@@ -39,6 +40,20 @@
 #import "UIImage+FX.h"
 #import "UIImage+Orientation.h"
 #import "UIImage+SuperCompress.h"
+
+//UIButton
+#import "UIButton+Block.h"
+
+//UIAlertView
+#import "UIAlertView+Block.h"
+
+//UILable
+#import "UILabel+AutoSize.h"
+#import "UILabel+SuggestSize.h"
+
+//UITextField
+#import "UITextField+Blocks.h"
+#import "UITextField+Select.h"
 
 //YHKVOController
 #import "YHKVOController.h"
