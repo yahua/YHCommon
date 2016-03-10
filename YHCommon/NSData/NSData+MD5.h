@@ -2,7 +2,7 @@
 //  NSData+MD5.h
 //  YHCommonDemo
 //
-//  Created by 王时温 on 16/3/4.
+//  Created by yahua on 16/3/4.
 //  Copyright © 2016年 wangsw. All rights reserved.
 //
 
