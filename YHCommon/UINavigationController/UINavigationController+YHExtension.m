@@ -16,7 +16,7 @@
     NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:self.viewControllers];
     [viewControllers removeObject:otherViewController];
     [viewControllers addObject:viewController];
-    [self.navigationController setViewControllers:viewControllers animated:animated];
+    [self setViewControllers:viewControllers animated:animated];
 }
 
 @end
