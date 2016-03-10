@@ -39,6 +39,7 @@
 		196221EF1C8927A70056384E /* UIImage+FX.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221DE1C8927A70056384E /* UIImage+FX.m */; };
 		196221F01C8927A70056384E /* UIImage+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221E01C8927A70056384E /* UIImage+Orientation.m */; };
 		196221F11C8927A70056384E /* UIImage+SuperCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221E21C8927A70056384E /* UIImage+SuperCompress.m */; };
+		197BCE1C1C916BAA00773DF2 /* UINavigationController+YHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 197BCE1B1C916BAA00773DF2 /* UINavigationController+YHExtension.m */; };
 		19FF5FA31C88588F00F67164 /* YHKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FF5FA21C88588F00F67164 /* YHKVOController.m */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,8 @@
 		196221E01C8927A70056384E /* UIImage+Orientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Orientation.m"; sourceTree = "<group>"; };
 		196221E11C8927A70056384E /* UIImage+SuperCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SuperCompress.h"; sourceTree = "<group>"; };
 		196221E21C8927A70056384E /* UIImage+SuperCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SuperCompress.m"; sourceTree = "<group>"; };
+		197BCE1A1C916BAA00773DF2 /* UINavigationController+YHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+YHExtension.h"; sourceTree = "<group>"; };
+		197BCE1B1C916BAA00773DF2 /* UINavigationController+YHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+YHExtension.m"; sourceTree = "<group>"; };
 		19FF5FA11C88588F00F67164 /* YHKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHKVOController.h; sourceTree = "<group>"; };
 		19FF5FA21C88588F00F67164 /* YHKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHKVOController.m; sourceTree = "<group>"; };
 		19FF5FA41C8858A200F67164 /* YHCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHCommon.h; sourceTree = "<group>"; };
@@ -342,9 +345,19 @@
 			path = UIImage;
 			sourceTree = "<group>";
 		};
+		197BCE191C916B5500773DF2 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				197BCE1A1C916BAA00773DF2 /* UINavigationController+YHExtension.h */,
+				197BCE1B1C916BAA00773DF2 /* UINavigationController+YHExtension.m */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
 		19FF5F9F1C88588E00F67164 /* YHCommon */ = {
 			isa = PBXGroup;
 			children = (
+				197BCE191C916B5500773DF2 /* UINavigationController */,
 				194A3A6F1C8E794D002AFECD /* NSTimer */,
 				194A3A741C8E794D002AFECD /* UIAlertView */,
 				194A3A771C8E794D002AFECD /* UILable */,
@@ -520,6 +533,7 @@
 				196221E91C8927A70056384E /* UIButton+Block.m in Sources */,
 				196221EE1C8927A70056384E /* UIImage+FileName.m in Sources */,
 				194F79DD1C882A6F00599CCB /* main.m in Sources */,
+				197BCE1C1C916BAA00773DF2 /* UINavigationController+YHExtension.m in Sources */,
 				194A3A821C8E794D002AFECD /* NSTimer+Blocks.m in Sources */,
 				194A3A811C8E794D002AFECD /* NSTimer+Addition.m in Sources */,
 				196221E51C8927A70056384E /* NSString+Base64.m in Sources */,
