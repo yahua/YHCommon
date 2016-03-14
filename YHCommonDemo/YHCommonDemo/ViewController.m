@@ -21,6 +21,18 @@
     // Do any additional setup after loading the view, typically from a nib.
     NSString *test = @"1234";
     NSLog(@"%@", [test MD5]);
+    if ([NSString stringIsNullOrEmpty:test]) {
+        NSLog(@"");
+    }
+    test = nil;
+    if ([NSString stringIsNullOrEmpty:test]) {
+        NSLog(@"");
+    }
+    test = @"  ";
+    if ([NSString stringIsNullOrEmpty:test]) {
+        NSLog(@"");
+    }
+    test = nil;
 }
 
 - (void)didReceiveMemoryWarning {

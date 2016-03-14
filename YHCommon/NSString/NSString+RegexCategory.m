@@ -18,6 +18,20 @@
 
 #pragma mark -
 
++ (BOOL)stringIsNullOrEmpty:(NSString *)string {
+    
+    if (string == nil) {
+        return YES;
+    }
+    if (![string isKindOfClass:[NSString class]]) {
+        return YES;
+    }
+    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]) {
+        return YES;
+    }
+    return NO;
+}
+
 //手机号分服务商
 - (BOOL)isMobileNumberClassification{
     /**

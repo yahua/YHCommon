@@ -83,6 +83,15 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (RegexCategory)
+
+/**
+ *  @author wangsw, 16-03-14 19:03:05
+ *
+ *  字符串是否为空或者nil
+ *
+ */
++ (BOOL)stringIsNullOrEmpty:(NSString *)string;
+
 /**
  *  手机号码的有效性:分电信、联通、移动和小灵通
  */
