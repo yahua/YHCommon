@@ -33,6 +33,12 @@
         NSLog(@"");
     }
     test = nil;
+    
+    @weakify(self)
+    dispatch_async(dispatch_get_main_queue(), ^{
+       @strongify(self)
+        self.view.backgroundColor = [UIColor redColor];
+    });
 }
 
 - (void)didReceiveMemoryWarning {

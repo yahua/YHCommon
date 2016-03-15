@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YHCommon"
-  s.version      = "0.1.2"
+  s.version      = "0.1.3"
   s.summary      = "App common file of YHCommon."
 
   s.description  = <<-DESC
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.requires_arc = true
 
-  s.source       = { :git => "https://github.com/yahua/YHCommon.git", :tag => "0.1.2" }
+  s.source       = { :git => "https://github.com/yahua/YHCommon.git", :tag => "0.1.3" }
 
 
 
@@ -55,6 +55,13 @@ EOS
   
   s.ios.deployment_target = '7.0'
   
+  s.subspec 'extobjc' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/extobjc/*.h'
+    ss.source_files = 'YHCommon/extobjc'
+  end
+
   s.subspec 'NSData' do |ss|
     ss.ios.deployment_target = '7.0'
 
@@ -138,6 +145,13 @@ EOS
 
     ss.public_header_files = 'YHCommon/UINavigationController/*.h'
     ss.source_files = 'YHCommon/UINavigationController'
+  end
+
+  s.subspec 'UIViewController' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/UIViewController/*.h'
+    ss.source_files = 'YHCommon/UIViewController'
   end
 
   s.subspec 'YHKVOController' do |ss|

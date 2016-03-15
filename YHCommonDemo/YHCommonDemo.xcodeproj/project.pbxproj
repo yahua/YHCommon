@@ -22,6 +22,8 @@
 		194F79EB1C882A6F00599CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194F79E91C882A6F00599CCB /* LaunchScreen.storyboard */; };
 		194F79F61C882A6F00599CCB /* YHCommonDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 194F79F51C882A6F00599CCB /* YHCommonDemoTests.m */; };
 		194F7A011C882A6F00599CCB /* YHCommonDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 194F7A001C882A6F00599CCB /* YHCommonDemoUITests.m */; };
+		195798841C97D84600CDDDD6 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 1957987E1C97D84600CDDDD6 /* EXTScope.m */; };
+		195798851C97D84600CDDDD6 /* UIViewController+Metrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 195798821C97D84600CDDDD6 /* UIViewController+Metrics.m */; };
 		195AB0E11C89305C000E35AB /* NSString+hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AB0E01C89305C000E35AB /* NSString+hash.m */; };
 		195AB0E41C8930EB000E35AB /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AB0E31C8930EB000E35AB /* NSData+MD5.m */; };
 		196221E31C8927A70056384E /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221C01C8927A70056384E /* NSData+Base64.m */; };
@@ -91,6 +93,13 @@
 		194F79FC1C882A6F00599CCB /* YHCommonDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YHCommonDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		194F7A001C882A6F00599CCB /* YHCommonDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHCommonDemoUITests.m; sourceTree = "<group>"; };
 		194F7A021C882A7000599CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1957987A1C97D84600CDDDD6 /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
+		1957987D1C97D84600CDDDD6 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		1957987E1C97D84600CDDDD6 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
+		1957987F1C97D84600CDDDD6 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		195798811C97D84600CDDDD6 /* UIViewController+Metrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Metrics.h"; sourceTree = "<group>"; };
+		195798821C97D84600CDDDD6 /* UIViewController+Metrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Metrics.m"; sourceTree = "<group>"; };
+		195798861C97D85100CDDDD6 /* SystemKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemKit.h; sourceTree = "<group>"; };
 		195AB0DF1C89305C000E35AB /* NSString+hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+hash.h"; sourceTree = "<group>"; };
 		195AB0E01C89305C000E35AB /* NSString+hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+hash.m"; sourceTree = "<group>"; };
 		195AB0E21C8930EB000E35AB /* NSData+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MD5.h"; sourceTree = "<group>"; };
@@ -262,6 +271,26 @@
 			path = YHCommonDemoUITests;
 			sourceTree = "<group>";
 		};
+		195798791C97D84600CDDDD6 /* extobjc */ = {
+			isa = PBXGroup;
+			children = (
+				1957987A1C97D84600CDDDD6 /* EXTKeyPathCoding.h */,
+				1957987D1C97D84600CDDDD6 /* EXTScope.h */,
+				1957987E1C97D84600CDDDD6 /* EXTScope.m */,
+				1957987F1C97D84600CDDDD6 /* metamacros.h */,
+			);
+			path = extobjc;
+			sourceTree = "<group>";
+		};
+		195798801C97D84600CDDDD6 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				195798811C97D84600CDDDD6 /* UIViewController+Metrics.h */,
+				195798821C97D84600CDDDD6 /* UIViewController+Metrics.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		196221BE1C8927A70056384E /* NSData */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +349,7 @@
 		196221D31C8927A70056384E /* UIDevice */ = {
 			isa = PBXGroup;
 			children = (
+				195798861C97D85100CDDDD6 /* SystemKit.h */,
 				196221D41C8927A70056384E /* UIDevice+Hardware.h */,
 				196221D51C8927A70056384E /* UIDevice+Hardware.m */,
 			);
@@ -357,6 +387,8 @@
 		19FF5F9F1C88588E00F67164 /* YHCommon */ = {
 			isa = PBXGroup;
 			children = (
+				195798791C97D84600CDDDD6 /* extobjc */,
+				195798801C97D84600CDDDD6 /* UIViewController */,
 				197BCE191C916B5500773DF2 /* UINavigationController */,
 				194A3A6F1C8E794D002AFECD /* NSTimer */,
 				194A3A741C8E794D002AFECD /* UIAlertView */,
@@ -519,6 +551,7 @@
 				196221F01C8927A70056384E /* UIImage+Orientation.m in Sources */,
 				195AB0E41C8930EB000E35AB /* NSData+MD5.m in Sources */,
 				196221E61C8927A70056384E /* NSString+Contains.m in Sources */,
+				195798841C97D84600CDDDD6 /* EXTScope.m in Sources */,
 				195AB0E11C89305C000E35AB /* NSString+hash.m in Sources */,
 				196221EA1C8927A70056384E /* UIColor+HEX.m in Sources */,
 				194F79E31C882A6F00599CCB /* ViewController.m in Sources */,
@@ -533,6 +566,7 @@
 				196221E91C8927A70056384E /* UIButton+Block.m in Sources */,
 				196221EE1C8927A70056384E /* UIImage+FileName.m in Sources */,
 				194F79DD1C882A6F00599CCB /* main.m in Sources */,
+				195798851C97D84600CDDDD6 /* UIViewController+Metrics.m in Sources */,
 				197BCE1C1C916BAA00773DF2 /* UINavigationController+YHExtension.m in Sources */,
 				194A3A821C8E794D002AFECD /* NSTimer+Blocks.m in Sources */,
 				194A3A811C8E794D002AFECD /* NSTimer+Addition.m in Sources */,
