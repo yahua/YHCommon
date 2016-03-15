@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "YHCommon.h"
+#import "UIViewController+Metrics.h"
 
 @interface ViewController ()
 
@@ -39,6 +40,9 @@
        @strongify(self)
         self.view.backgroundColor = [UIColor redColor];
     });
+    
+    CGFloat width  = self.width;
+    NSLog(@"");
 }
 
 - (void)didReceiveMemoryWarning {

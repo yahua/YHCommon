@@ -29,13 +29,11 @@
 //	IN THE SOFTWARE.
 //
 
-#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
-
 #import "UIViewController+Metrics.h"
 
 #pragma mark -
 
-@implementation UIViewController(Metrics)
+@implementation UIViewController (Metrics)
 
 @dynamic frame;
 @dynamic bounds;
@@ -148,4 +146,3 @@
 
 @end
 
-#endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)

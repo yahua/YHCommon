@@ -29,14 +29,12 @@
 //	IN THE SOFTWARE.
 //
 
-#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
-
 #import <UIKit/UIKit.h>
 #import "SystemKit.h"
 
 #pragma mark -
 
-@interface UIViewController(Metrics)
+@interface UIViewController (Metrics)
 
 @property (nonatomic, readonly) CGRect		frame;
 @property (nonatomic, readonly) CGRect		bounds;
@@ -52,4 +50,3 @@
 
 @end
 
-#endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)

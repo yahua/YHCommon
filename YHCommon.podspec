@@ -149,6 +149,7 @@ EOS
 
   s.subspec 'UIViewController' do |ss|
     ss.ios.deployment_target = '7.0'
+    ss.dependency 'YHCommon/UIDevice'
 
     ss.public_header_files = 'YHCommon/UIViewController/*.h'
     ss.source_files = 'YHCommon/UIViewController'
