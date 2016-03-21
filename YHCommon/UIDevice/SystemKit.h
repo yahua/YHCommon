@@ -34,6 +34,11 @@
 #define kUIScreen_Width [[UIScreen mainScreen] bounds].size.width
 #define kUIScreen_Height [[UIScreen mainScreen] bounds].size.height
 
+#define kUIScreen_TopBarHeight 64
+#define kUIScreen_AppContentHeight  (kUIScreen_Height - kUIScreen_TopBarHeight)
+#define kUIScreen_TopBarContentY 20
+#define kUIScreen_TabBarHeight 44
+
 #endif
 ////////////////////////////////////////////////////////////////////
 

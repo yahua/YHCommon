@@ -41,6 +41,9 @@
 		196221F01C8927A70056384E /* UIImage+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221E01C8927A70056384E /* UIImage+Orientation.m */; };
 		196221F11C8927A70056384E /* UIImage+SuperCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221E21C8927A70056384E /* UIImage+SuperCompress.m */; };
 		197BCE1C1C916BAA00773DF2 /* UINavigationController+YHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 197BCE1B1C916BAA00773DF2 /* UINavigationController+YHExtension.m */; };
+		197DB8451CA009DD00C5557D /* UIFont+YHAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 197DB8401CA009DD00C5557D /* UIFont+YHAutoLayout.m */; };
+		197DB8461CA009DD00C5557D /* UIView+YHAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 197DB8421CA009DD00C5557D /* UIView+YHAutoLayout.m */; };
+		197DB8471CA009DD00C5557D /* UIView+YHLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 197DB8441CA009DD00C5557D /* UIView+YHLayout.m */; };
 		19E05F851C97DD39002291AB /* UIViewController+Metrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E05F831C97DD0F002291AB /* UIViewController+Metrics.m */; };
 		19FF5FA31C88588F00F67164 /* YHKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FF5FA21C88588F00F67164 /* YHKVOController.m */; };
 /* End PBXBuildFile section */
@@ -134,6 +137,12 @@
 		196221E21C8927A70056384E /* UIImage+SuperCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SuperCompress.m"; sourceTree = "<group>"; };
 		197BCE1A1C916BAA00773DF2 /* UINavigationController+YHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+YHExtension.h"; sourceTree = "<group>"; };
 		197BCE1B1C916BAA00773DF2 /* UINavigationController+YHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+YHExtension.m"; sourceTree = "<group>"; };
+		197DB83F1CA009DD00C5557D /* UIFont+YHAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+YHAutoLayout.h"; sourceTree = "<group>"; };
+		197DB8401CA009DD00C5557D /* UIFont+YHAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+YHAutoLayout.m"; sourceTree = "<group>"; };
+		197DB8411CA009DD00C5557D /* UIView+YHAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YHAutoLayout.h"; sourceTree = "<group>"; };
+		197DB8421CA009DD00C5557D /* UIView+YHAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YHAutoLayout.m"; sourceTree = "<group>"; };
+		197DB8431CA009DD00C5557D /* UIView+YHLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YHLayout.h"; sourceTree = "<group>"; };
+		197DB8441CA009DD00C5557D /* UIView+YHLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YHLayout.m"; sourceTree = "<group>"; };
 		19E05F821C97DD0F002291AB /* UIViewController+Metrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Metrics.h"; sourceTree = "<group>"; };
 		19E05F831C97DD0F002291AB /* UIViewController+Metrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Metrics.m"; sourceTree = "<group>"; };
 		19FF5FA11C88588F00F67164 /* YHKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHKVOController.h; sourceTree = "<group>"; };
@@ -384,9 +393,23 @@
 			path = UINavigationController;
 			sourceTree = "<group>";
 		};
+		197DB83E1CA009DD00C5557D /* YHLayout */ = {
+			isa = PBXGroup;
+			children = (
+				197DB83F1CA009DD00C5557D /* UIFont+YHAutoLayout.h */,
+				197DB8401CA009DD00C5557D /* UIFont+YHAutoLayout.m */,
+				197DB8411CA009DD00C5557D /* UIView+YHAutoLayout.h */,
+				197DB8421CA009DD00C5557D /* UIView+YHAutoLayout.m */,
+				197DB8431CA009DD00C5557D /* UIView+YHLayout.h */,
+				197DB8441CA009DD00C5557D /* UIView+YHLayout.m */,
+			);
+			path = YHLayout;
+			sourceTree = "<group>";
+		};
 		19FF5F9F1C88588E00F67164 /* YHCommon */ = {
 			isa = PBXGroup;
 			children = (
+				197DB83E1CA009DD00C5557D /* YHLayout */,
 				195798791C97D84600CDDDD6 /* extobjc */,
 				195798801C97D84600CDDDD6 /* UIViewController */,
 				197BCE191C916B5500773DF2 /* UINavigationController */,
@@ -551,13 +574,16 @@
 				194A3A841C8E794D002AFECD /* UILabel+AutoSize.m in Sources */,
 				196221F01C8927A70056384E /* UIImage+Orientation.m in Sources */,
 				195AB0E41C8930EB000E35AB /* NSData+MD5.m in Sources */,
+				197DB8461CA009DD00C5557D /* UIView+YHAutoLayout.m in Sources */,
 				196221E61C8927A70056384E /* NSString+Contains.m in Sources */,
 				195798841C97D84600CDDDD6 /* EXTScope.m in Sources */,
 				195AB0E11C89305C000E35AB /* NSString+hash.m in Sources */,
 				196221EA1C8927A70056384E /* UIColor+HEX.m in Sources */,
+				197DB8451CA009DD00C5557D /* UIFont+YHAutoLayout.m in Sources */,
 				194F79E31C882A6F00599CCB /* ViewController.m in Sources */,
 				196221E41C8927A70056384E /* NSDate+Utilities.m in Sources */,
 				19FF5FA31C88588F00F67164 /* YHKVOController.m in Sources */,
+				197DB8471CA009DD00C5557D /* UIView+YHLayout.m in Sources */,
 				196221E81C8927A70056384E /* NSString+Size.m in Sources */,
 				196221E31C8927A70056384E /* NSData+Base64.m in Sources */,
 				194F79E01C882A6F00599CCB /* AppDelegate.m in Sources */,

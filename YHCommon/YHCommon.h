@@ -68,4 +68,9 @@
 //YHKVOController
 #import "YHKVOController.h"
 
+//YHLayout
+#import "UIView+YHLayout.h"
+#import "UIView+YHAutoLayout.h"
+#import "UIFont+YHAutoLayout.h"
+
 #endif /* YHCommon_h */
