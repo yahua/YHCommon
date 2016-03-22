@@ -43,6 +43,9 @@
     
     CGFloat width  = self.width;
     NSLog(@"");
+    
+    [UIFont setStandardUIWidth:320];
+    UIFont *font = [UIFont autoFontOfSize:12.0f];
 }
 
 - (void)didReceiveMemoryWarning {
