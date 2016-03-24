@@ -44,6 +44,7 @@
 		197DB8451CA009DD00C5557D /* UIFont+YHAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 197DB8401CA009DD00C5557D /* UIFont+YHAutoLayout.m */; };
 		197DB8461CA009DD00C5557D /* UIView+YHAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 197DB8421CA009DD00C5557D /* UIView+YHAutoLayout.m */; };
 		197DB8471CA009DD00C5557D /* UIView+YHLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 197DB8441CA009DD00C5557D /* UIView+YHLayout.m */; };
+		19A1D8D11CA3F1090063C5B0 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A1D8D01CA3F1090063C5B0 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		19E05F851C97DD39002291AB /* UIViewController+Metrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E05F831C97DD0F002291AB /* UIViewController+Metrics.m */; };
 		19FF5FA31C88588F00F67164 /* YHKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FF5FA21C88588F00F67164 /* YHKVOController.m */; };
 /* End PBXBuildFile section */
@@ -143,6 +144,8 @@
 		197DB8421CA009DD00C5557D /* UIView+YHAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YHAutoLayout.m"; sourceTree = "<group>"; };
 		197DB8431CA009DD00C5557D /* UIView+YHLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YHLayout.h"; sourceTree = "<group>"; };
 		197DB8441CA009DD00C5557D /* UIView+YHLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YHLayout.m"; sourceTree = "<group>"; };
+		19A1D8CF1CA3F1090063C5B0 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		19A1D8D01CA3F1090063C5B0 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		19E05F821C97DD0F002291AB /* UIViewController+Metrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Metrics.h"; sourceTree = "<group>"; };
 		19E05F831C97DD0F002291AB /* UIViewController+Metrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Metrics.m"; sourceTree = "<group>"; };
 		19FF5FA11C88588F00F67164 /* YHKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHKVOController.h; sourceTree = "<group>"; };
@@ -358,6 +361,8 @@
 		196221D31C8927A70056384E /* UIDevice */ = {
 			isa = PBXGroup;
 			children = (
+				19A1D8CF1CA3F1090063C5B0 /* OpenUDID.h */,
+				19A1D8D01CA3F1090063C5B0 /* OpenUDID.m */,
 				195798861C97D85100CDDDD6 /* SystemKit.h */,
 				196221D41C8927A70056384E /* UIDevice+Hardware.h */,
 				196221D51C8927A70056384E /* UIDevice+Hardware.m */,
@@ -594,6 +599,7 @@
 				196221EE1C8927A70056384E /* UIImage+FileName.m in Sources */,
 				194F79DD1C882A6F00599CCB /* main.m in Sources */,
 				197BCE1C1C916BAA00773DF2 /* UINavigationController+YHExtension.m in Sources */,
+				19A1D8D11CA3F1090063C5B0 /* OpenUDID.m in Sources */,
 				194A3A821C8E794D002AFECD /* NSTimer+Blocks.m in Sources */,
 				194A3A811C8E794D002AFECD /* NSTimer+Addition.m in Sources */,
 				196221E51C8927A70056384E /* NSString+Base64.m in Sources */,

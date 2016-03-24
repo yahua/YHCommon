@@ -119,4 +119,12 @@ typedef enum
 + (long long)freeDiskSpaceBytes;
 /// 获取手机硬盘总空间, 返回的是字节数
 + (long long)totalDiskSpaceBytes;
+
+/**
+ *  @author wangsw, 16-03-24 18:03:41
+ *
+ *  设备OpenUDID
+ */
++ (NSString *)openUDID;
+
 @end

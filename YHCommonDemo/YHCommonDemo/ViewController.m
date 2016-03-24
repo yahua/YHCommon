@@ -42,10 +42,14 @@
     });
     
     CGFloat width  = self.width;
-    NSLog(@"");
+    
     
     [UIFont setStandardUIWidth:320];
     UIFont *font = [UIFont autoFontOfSize:12.0f];
+    
+    NSString *openUDID = [UIDevice openUDID];
+    
+    NSLog(@"");
 }
 
 - (void)didReceiveMemoryWarning {
