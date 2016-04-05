@@ -32,4 +32,10 @@ static char kStandardWidth;
     return [UIFont systemFontOfSize:size];
 }
 
++ (UIFont *)autoBoldFontOfSize:(CGFloat)size {
+    
+    size = size * kFontAutoLayoutScale;
+    return [UIFont boldSystemFontOfSize:size];
+}
+
 @end

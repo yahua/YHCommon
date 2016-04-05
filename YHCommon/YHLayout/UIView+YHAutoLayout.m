@@ -92,29 +92,25 @@ static char kStandardWidth;
 
 - (void)auto_top:(CGFloat)top FromView:(UIView *)view {
     
-    CGFloat topRatio = top / [UIView standardWidth];
-    CGFloat topValue = topRatio * self.superview.width;
+    CGFloat topValue = top * kYHAutoLayoutScale;
     [self top:topValue FromView:view];
 }
 
 - (void)auto_bottom:(CGFloat)bottom FromView:(UIView *)view {
     
-    CGFloat bottomRatio = bottom / [UIView standardWidth];
-    CGFloat bottomValue = bottomRatio * self.superview.width;
+    CGFloat bottomValue = bottom * kYHAutoLayoutScale;
     [self bottom:bottomValue FromView:view];
 }
 
 - (void)auto_left:(CGFloat)left FromView:(UIView *)view {
     
-    CGFloat leftRatio = left / [UIView standardWidth];
-    CGFloat leftValue = leftRatio * self.superview.width;
+    CGFloat leftValue = left * kYHAutoLayoutScale;
     [self left:leftValue FromView:view];
 }
 
 - (void)auto_right:(CGFloat)right FromView:(UIView *)view {
     
-    CGFloat rightRatio = right / [UIView standardWidth];
-    CGFloat rightValue = rightRatio * self.superview.width;
+    CGFloat rightValue = right * kYHAutoLayoutScale;
     [self right:rightValue FromView:view];
 }
 
@@ -122,29 +118,25 @@ static char kStandardWidth;
 
 - (void)auto_topInContainer:(CGFloat)top {
     
-    CGFloat topRatio = top / [UIView standardWidth];
-    CGFloat topValue = topRatio * self.superview.width;
+    CGFloat topValue = top * kYHAutoLayoutScale;
     [self topInContainer:topValue shouldResize:YES];
 }
 
 - (void)auto_bottomInContainer:(CGFloat)bottom {
     
-    CGFloat bottomRatio = bottom / [UIView standardWidth];
-    CGFloat bottomValue = bottomRatio * self.superview.width;
+    CGFloat bottomValue = bottom * kYHAutoLayoutScale;
     [self bottomInContainer:bottomValue shouldResize:YES];
 }
 
 - (void)auto_leftInContainer:(CGFloat)left {
     
-    CGFloat leftRatio = left / [UIView standardWidth];
-    CGFloat leftValue = leftRatio * self.superview.width;
+    CGFloat leftValue = left * kYHAutoLayoutScale;
     [self leftInContainer:leftValue shouldResize:YES];
 }
 
 - (void)auto_rightInContainer:(CGFloat)right {
     
-    CGFloat rightRatio = right / [UIView standardWidth];
-    CGFloat rightValue = rightRatio * self.superview.width;
+    CGFloat rightValue = right * kYHAutoLayoutScale;
     [self rightInContainer:rightValue shouldResize:YES];
 }
 

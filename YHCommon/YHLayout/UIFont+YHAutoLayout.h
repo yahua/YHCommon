@@ -19,4 +19,6 @@
 
 + (UIFont *)autoFontOfSize:(CGFloat)size;
 
++ (UIFont *)autoBoldFontOfSize:(CGFloat)size;
+
 @end
