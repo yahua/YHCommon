@@ -6,13 +6,13 @@
 //  Copyright © 2016年 wangsw. All rights reserved.
 //
 
-#import "UIFont+YHAutoLayout.h"
+#import "UIFont+YAHAutoLayout.h"
 
 #import <objc/runtime.h>
 
 #define kFontAutoLayoutScale  ([UIScreen mainScreen].bounds.size.width*1.0/[UIFont standardWidth])
 
-@implementation UIFont (YHAutoLayout)
+@implementation UIFont (YAHAutoLayout)
 
 static char kStandardWidth;
 + (void)setStandardUIWidth:(CGFloat)width {

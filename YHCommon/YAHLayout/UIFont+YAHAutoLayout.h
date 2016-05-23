@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIFont (YHAutoLayout)
+@interface UIFont (YAHAutoLayout)
 
 /**
  *  @author wangsw, 16-03-21 16:03:34

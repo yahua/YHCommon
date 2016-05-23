@@ -66,12 +66,10 @@
 //UIViewController
 #import "UIViewController+Metrics.h"
 
-//YHKVOController
+//YAHKVOController
 #import "YAHKVOController.h"
 
-//YHLayout
-#import "UIView+YHLayout.h"
-#import "UIView+YHAutoLayout.h"
-#import "UIFont+YHAutoLayout.h"
+//YAHLayout
+#import "YAHLayout.h"
 
 #endif /* YHCommon_h */

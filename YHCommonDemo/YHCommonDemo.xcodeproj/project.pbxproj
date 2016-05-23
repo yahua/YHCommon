@@ -41,12 +41,12 @@
 		196221F01C8927A70056384E /* UIImage+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221E01C8927A70056384E /* UIImage+Orientation.m */; };
 		196221F11C8927A70056384E /* UIImage+SuperCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 196221E21C8927A70056384E /* UIImage+SuperCompress.m */; };
 		197BCE1C1C916BAA00773DF2 /* UINavigationController+YHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 197BCE1B1C916BAA00773DF2 /* UINavigationController+YHExtension.m */; };
-		197DB8451CA009DD00C5557D /* UIFont+YHAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 197DB8401CA009DD00C5557D /* UIFont+YHAutoLayout.m */; };
-		197DB8461CA009DD00C5557D /* UIView+YHAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 197DB8421CA009DD00C5557D /* UIView+YHAutoLayout.m */; };
-		197DB8471CA009DD00C5557D /* UIView+YHLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 197DB8441CA009DD00C5557D /* UIView+YHLayout.m */; };
 		198183521CF2AAF000C8E899 /* NSString+Transfer_YAH.m in Sources */ = {isa = PBXBuildFile; fileRef = 198183511CF2AAF000C8E899 /* NSString+Transfer_YAH.m */; };
 		198183561CF2D40600C8E899 /* YAHKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 198183551CF2D40600C8E899 /* YAHKVOController.m */; };
-		19A1D8D11CA3F1090063C5B0 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A1D8D01CA3F1090063C5B0 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1981835E1CF2D79200C8E899 /* UIFont+YAHAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 198183591CF2D79200C8E899 /* UIFont+YAHAutoLayout.m */; };
+		1981835F1CF2D79200C8E899 /* UIView+YAHAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1981835B1CF2D79200C8E899 /* UIView+YAHAutoLayout.m */; };
+		198183601CF2D79200C8E899 /* UIView+YAHLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1981835D1CF2D79200C8E899 /* UIView+YAHLayout.m */; };
+		198183631CF2D84E00C8E899 /* YAHLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 198183621CF2D84E00C8E899 /* YAHLayout.m */; };
 		19E05F851C97DD39002291AB /* UIViewController+Metrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E05F831C97DD0F002291AB /* UIViewController+Metrics.m */; };
 /* End PBXBuildFile section */
 
@@ -139,18 +139,18 @@
 		196221E21C8927A70056384E /* UIImage+SuperCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SuperCompress.m"; sourceTree = "<group>"; };
 		197BCE1A1C916BAA00773DF2 /* UINavigationController+YHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+YHExtension.h"; sourceTree = "<group>"; };
 		197BCE1B1C916BAA00773DF2 /* UINavigationController+YHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+YHExtension.m"; sourceTree = "<group>"; };
-		197DB83F1CA009DD00C5557D /* UIFont+YHAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+YHAutoLayout.h"; sourceTree = "<group>"; };
-		197DB8401CA009DD00C5557D /* UIFont+YHAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+YHAutoLayout.m"; sourceTree = "<group>"; };
-		197DB8411CA009DD00C5557D /* UIView+YHAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YHAutoLayout.h"; sourceTree = "<group>"; };
-		197DB8421CA009DD00C5557D /* UIView+YHAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YHAutoLayout.m"; sourceTree = "<group>"; };
-		197DB8431CA009DD00C5557D /* UIView+YHLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YHLayout.h"; sourceTree = "<group>"; };
-		197DB8441CA009DD00C5557D /* UIView+YHLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YHLayout.m"; sourceTree = "<group>"; };
 		198183501CF2AAF000C8E899 /* NSString+Transfer_YAH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Transfer_YAH.h"; sourceTree = "<group>"; };
 		198183511CF2AAF000C8E899 /* NSString+Transfer_YAH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Transfer_YAH.m"; sourceTree = "<group>"; };
 		198183541CF2D40600C8E899 /* YAHKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAHKVOController.h; sourceTree = "<group>"; };
 		198183551CF2D40600C8E899 /* YAHKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAHKVOController.m; sourceTree = "<group>"; };
-		19A1D8CF1CA3F1090063C5B0 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
-		19A1D8D01CA3F1090063C5B0 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		198183581CF2D79200C8E899 /* UIFont+YAHAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+YAHAutoLayout.h"; sourceTree = "<group>"; };
+		198183591CF2D79200C8E899 /* UIFont+YAHAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+YAHAutoLayout.m"; sourceTree = "<group>"; };
+		1981835A1CF2D79200C8E899 /* UIView+YAHAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YAHAutoLayout.h"; sourceTree = "<group>"; };
+		1981835B1CF2D79200C8E899 /* UIView+YAHAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YAHAutoLayout.m"; sourceTree = "<group>"; };
+		1981835C1CF2D79200C8E899 /* UIView+YAHLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YAHLayout.h"; sourceTree = "<group>"; };
+		1981835D1CF2D79200C8E899 /* UIView+YAHLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YAHLayout.m"; sourceTree = "<group>"; };
+		198183611CF2D84E00C8E899 /* YAHLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAHLayout.h; sourceTree = "<group>"; };
+		198183621CF2D84E00C8E899 /* YAHLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAHLayout.m; sourceTree = "<group>"; };
 		19E05F821C97DD0F002291AB /* UIViewController+Metrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Metrics.h"; sourceTree = "<group>"; };
 		19E05F831C97DD0F002291AB /* UIViewController+Metrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Metrics.m"; sourceTree = "<group>"; };
 		19FF5FA41C8858A200F67164 /* YHCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHCommon.h; sourceTree = "<group>"; };
@@ -366,8 +366,6 @@
 		196221D31C8927A70056384E /* UIDevice */ = {
 			isa = PBXGroup;
 			children = (
-				19A1D8CF1CA3F1090063C5B0 /* OpenUDID.h */,
-				19A1D8D01CA3F1090063C5B0 /* OpenUDID.m */,
 				195798861C97D85100CDDDD6 /* SystemKit.h */,
 				196221D41C8927A70056384E /* UIDevice+Hardware.h */,
 				196221D51C8927A70056384E /* UIDevice+Hardware.m */,
@@ -403,19 +401,6 @@
 			path = UINavigationController;
 			sourceTree = "<group>";
 		};
-		197DB83E1CA009DD00C5557D /* YHLayout */ = {
-			isa = PBXGroup;
-			children = (
-				197DB83F1CA009DD00C5557D /* UIFont+YHAutoLayout.h */,
-				197DB8401CA009DD00C5557D /* UIFont+YHAutoLayout.m */,
-				197DB8411CA009DD00C5557D /* UIView+YHAutoLayout.h */,
-				197DB8421CA009DD00C5557D /* UIView+YHAutoLayout.m */,
-				197DB8431CA009DD00C5557D /* UIView+YHLayout.h */,
-				197DB8441CA009DD00C5557D /* UIView+YHLayout.m */,
-			);
-			path = YHLayout;
-			sourceTree = "<group>";
-		};
 		198183531CF2D40600C8E899 /* YAHKVOController */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,10 +410,25 @@
 			path = YAHKVOController;
 			sourceTree = "<group>";
 		};
+		198183571CF2D79200C8E899 /* YAHLayout */ = {
+			isa = PBXGroup;
+			children = (
+				198183611CF2D84E00C8E899 /* YAHLayout.h */,
+				198183621CF2D84E00C8E899 /* YAHLayout.m */,
+				198183581CF2D79200C8E899 /* UIFont+YAHAutoLayout.h */,
+				198183591CF2D79200C8E899 /* UIFont+YAHAutoLayout.m */,
+				1981835A1CF2D79200C8E899 /* UIView+YAHAutoLayout.h */,
+				1981835B1CF2D79200C8E899 /* UIView+YAHAutoLayout.m */,
+				1981835C1CF2D79200C8E899 /* UIView+YAHLayout.h */,
+				1981835D1CF2D79200C8E899 /* UIView+YAHLayout.m */,
+			);
+			path = YAHLayout;
+			sourceTree = "<group>";
+		};
 		19FF5F9F1C88588E00F67164 /* YHCommon */ = {
 			isa = PBXGroup;
 			children = (
-				197DB83E1CA009DD00C5557D /* YHLayout */,
+				198183571CF2D79200C8E899 /* YAHLayout */,
 				195798791C97D84600CDDDD6 /* extobjc */,
 				195798801C97D84600CDDDD6 /* UIViewController */,
 				197BCE191C916B5500773DF2 /* UINavigationController */,
@@ -580,21 +580,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198183631CF2D84E00C8E899 /* YAHLayout.m in Sources */,
 				19E05F851C97DD39002291AB /* UIViewController+Metrics.m in Sources */,
 				194A3A841C8E794D002AFECD /* UILabel+AutoSize.m in Sources */,
+				1981835F1CF2D79200C8E899 /* UIView+YAHAutoLayout.m in Sources */,
 				196221F01C8927A70056384E /* UIImage+Orientation.m in Sources */,
 				195AB0E41C8930EB000E35AB /* NSData+MD5.m in Sources */,
-				197DB8461CA009DD00C5557D /* UIView+YHAutoLayout.m in Sources */,
 				196221E61C8927A70056384E /* NSString+Contains_YAH.m in Sources */,
 				195798841C97D84600CDDDD6 /* EXTScope.m in Sources */,
 				195AB0E11C89305C000E35AB /* NSString+Hash_YAH.m in Sources */,
 				196221EA1C8927A70056384E /* UIColor+HEX.m in Sources */,
-				197DB8451CA009DD00C5557D /* UIFont+YHAutoLayout.m in Sources */,
 				194F79E31C882A6F00599CCB /* ViewController.m in Sources */,
 				196221E41C8927A70056384E /* NSDate+Utilities.m in Sources */,
-				197DB8471CA009DD00C5557D /* UIView+YHLayout.m in Sources */,
 				196221E81C8927A70056384E /* NSString+Size_YAH.m in Sources */,
 				196221E31C8927A70056384E /* NSData+Base64.m in Sources */,
+				1981835E1CF2D79200C8E899 /* UIFont+YAHAutoLayout.m in Sources */,
 				194F79E01C882A6F00599CCB /* AppDelegate.m in Sources */,
 				196221EF1C8927A70056384E /* UIImage+FX.m in Sources */,
 				194A3A871C8E794D002AFECD /* UITextField+Select.m in Sources */,
@@ -604,8 +604,8 @@
 				196221EE1C8927A70056384E /* UIImage+FileName.m in Sources */,
 				194F79DD1C882A6F00599CCB /* main.m in Sources */,
 				197BCE1C1C916BAA00773DF2 /* UINavigationController+YHExtension.m in Sources */,
-				19A1D8D11CA3F1090063C5B0 /* OpenUDID.m in Sources */,
 				194A3A821C8E794D002AFECD /* NSTimer+Blocks.m in Sources */,
+				198183601CF2D79200C8E899 /* UIView+YAHLayout.m in Sources */,
 				194A3A811C8E794D002AFECD /* NSTimer+Addition.m in Sources */,
 				196221E51C8927A70056384E /* NSString+Base64_YAH.m in Sources */,
 				196221ED1C8927A70056384E /* UIImage+Color.m in Sources */,

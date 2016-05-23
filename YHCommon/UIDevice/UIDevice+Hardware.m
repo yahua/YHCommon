@@ -9,7 +9,6 @@
 #import "UIDevice+Hardware.h"
 #include <sys/types.h>
 #include <sys/sysctl.h>
-#import "OpenUDID.h"
 
 #import <sys/socket.h>
 #import <sys/param.h>
@@ -459,11 +458,6 @@
         totalspace = (long long)buf.f_bsize * buf.f_blocks;
     }
     return totalspace;
-}
-
-+ (NSString *)openUDID {
-    
-    return [OpenUDID value];
 }
 
 @end

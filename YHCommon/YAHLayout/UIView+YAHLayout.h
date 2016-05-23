@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (frameutil)
+@interface UIView (YAHFrameutil)
 
 @property (nonatomic, assign) CGFloat top;
 
@@ -45,7 +45,7 @@
 @end
 
 
-@interface UIView (YHLayout)
+@interface UIView (YAHLayout)
 
 //相对于父view
 - (void)centerXInContainer;
