@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (hash)
+@interface NSString (Hash_YAH)
 
 - (NSString *)MD5;
 

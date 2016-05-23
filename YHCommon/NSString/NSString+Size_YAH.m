@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
 //
 
-#import "NSString+Size.h"
+#import "NSString+Size_YAH.h"
 
-@implementation NSString (Size)
+@implementation NSString (Size_YAH)
 /**
  *  @brief 计算文字的高度
  *

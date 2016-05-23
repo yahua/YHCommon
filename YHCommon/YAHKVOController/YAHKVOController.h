@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^YHKVONotificationBlock)(id observer, id object, NSDictionary *change);
+typedef void (^YAHKVONotificationBlock)(id observer, id object, NSDictionary *change);
 
-@interface YHKVOController : NSObject
+@interface YAHKVOController : NSObject
 
 /// The observer notified on key-value change. Specified on initialization.
 @property (atomic, weak, readonly) id observer;
@@ -23,7 +23,7 @@ typedef void (^YHKVONotificationBlock)(id observer, id object, NSDictionary *cha
  @param block The block to execute on notification.
  @discussion On key-value change, the specified block is called. Inorder to avoid retain loops, the block must avoid referencing the KVO controller or an owner thereof. Observing an already observed object key path or nil results in no operation.
  */
-- (void)observe:(id)object keyPath:(NSString *)keyPath block:(YHKVONotificationBlock)block;
+- (void)observe:(id)object keyPath:(NSString *)keyPath block:(YAHKVONotificationBlock)block;
 
 /**
  @abstract Registers observer for key-value change notification.
@@ -33,7 +33,7 @@ typedef void (^YHKVONotificationBlock)(id observer, id object, NSDictionary *cha
  @param block The block to execute on notification.
  @discussion On key-value change, the specified block is called. Inorder to avoid retain loops, the block must avoid referencing the KVO controller or an owner thereof. Observing an already observed object key path or nil results in no operation.
  */
-- (void)observe:(id)object keyPaths:(NSArray *)keyPaths block:(YHKVONotificationBlock)block;
+- (void)observe:(id)object keyPaths:(NSArray *)keyPaths block:(YAHKVONotificationBlock)block;
 
 /**
  @abstract Unobserve object key path.
@@ -61,13 +61,13 @@ typedef void (^YHKVONotificationBlock)(id observer, id object, NSDictionary *cha
 
 
 
-@interface NSObject (YHKVOController)
+@interface NSObject (YAHKVOController)
 
 /**
  @abstract Lazy-loaded YHKVOController for use with any object
  @return YHKVOController associated with this object, creating one if necessary
  @discussion This makes it convenient to simply create and forget a YHKVOController, and when this object gets dealloc'd, so will the associated controller and the observation info.
  */
-@property (nonatomic, strong) YHKVOController *KVOController;
+@property (nonatomic, strong) YAHKVOController *yah_KVOController;
 
 @end

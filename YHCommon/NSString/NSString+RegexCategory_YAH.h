@@ -80,9 +80,7 @@
  *  最后是8个数字(\d{8})
  */
 
-#import <Foundation/Foundation.h>
-
-@interface NSString (RegexCategory)
+@interface NSString (RegexCategory_YAH)
 
 /**
  *  @author wangsw, 16-03-14 19:03:05

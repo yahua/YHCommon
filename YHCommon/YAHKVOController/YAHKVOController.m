@@ -6,7 +6,7 @@
 //  Copyright © 2016年 wangsw. All rights reserved.
 //
 
-#import "YHKVOController.h"
+#import "YAHKVOController.h"
 
 #import <objc/message.h>
 #import <pthread.h>
@@ -24,13 +24,13 @@
 @implementation _YHKVOInfo
 {
 @public
-    __weak YHKVOController *_controller;
+    __weak YAHKVOController *_controller;
     NSString *_keyPath;
     NSKeyValueObservingOptions _options;
-    YHKVONotificationBlock _block;
+    YAHKVONotificationBlock _block;
 }
 
-- (instancetype)initWithController:(YHKVOController *)controller keyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(YHKVONotificationBlock)block
+- (instancetype)initWithController:(YAHKVOController *)controller keyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(YAHKVONotificationBlock)block
 {
     self = [super init];
     if (nil != self) {
@@ -42,7 +42,7 @@
     return self;
 }
 
-- (instancetype)initWithController:(YHKVOController *)controller keyPath:(NSString *)keyPath
+- (instancetype)initWithController:(YAHKVOController *)controller keyPath:(NSString *)keyPath
 {
     return [self initWithController:controller keyPath:keyPath options:0 block:NULL];
 }
@@ -210,7 +210,7 @@
     if (nil != info) {
         
         // take strong reference to controller
-        YHKVOController *controller = info->_controller;
+        YAHKVOController *controller = info->_controller;
         if (nil != controller) {
             
             // take strong reference to observer
@@ -242,14 +242,14 @@
 
 #pragma mark YHKVOController -
 
-@interface YHKVOController ()
+@interface YAHKVOController ()
 
 @property (nonatomic, strong) NSMapTable *objectInfosMap;
 @property (nonatomic, assign) pthread_mutex_t mutexLock;
 
 @end
 
-@implementation YHKVOController
+@implementation YAHKVOController
 
 #pragma mark Lifecycle
 
@@ -413,7 +413,7 @@
 
 #pragma mark API -
 
-- (void)observe:(id)object keyPath:(NSString *)keyPath block:(YHKVONotificationBlock)block
+- (void)observe:(id)object keyPath:(NSString *)keyPath block:(YAHKVONotificationBlock)block
 {
     NSAssert(0 != keyPath.length && NULL != block, @"missing required parameters observe:%@ keyPath:%@ block:%p", object, keyPath, block);
     if (nil == object || 0 == keyPath.length || NULL == block) {
@@ -430,7 +430,7 @@
 }
 
 
-- (void)observe:(id)object keyPaths:(NSArray *)keyPaths block:(YHKVONotificationBlock)block
+- (void)observe:(id)object keyPaths:(NSArray *)keyPaths block:(YAHKVONotificationBlock)block
 {
     NSAssert(0 != keyPaths.count && NULL != block, @"missing required parameters observe:%@ keyPath:%@ block:%p", object, keyPaths, block);
     if (nil == object || 0 == keyPaths.count || NULL == block) {
@@ -486,24 +486,24 @@
 
 static void *NSObjectKVOControllerKey = &NSObjectKVOControllerKey;
 
-@implementation NSObject (YHKVOController)
+@implementation NSObject (YAHKVOController)
 
-- (YHKVOController *)KVOController
+- (YAHKVOController *)yah_KVOController
 {
     id controller = objc_getAssociatedObject(self, NSObjectKVOControllerKey);
     
     // lazily create the KVOController
     if (nil == controller) {
-        controller = [YHKVOController controllerWithObserver:self];
-        self.KVOController = controller;
+        controller = [YAHKVOController controllerWithObserver:self];
+        self.yah_KVOController = controller;
     }
     
     return controller;
 }
 
-- (void)setKVOController:(YHKVOController *)KVOController
+- (void)setYah_KVOController:(YAHKVOController *)yah_KVOController
 {
-    objc_setAssociatedObject(self, NSObjectKVOControllerKey, KVOController, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, NSObjectKVOControllerKey, yah_KVOController, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

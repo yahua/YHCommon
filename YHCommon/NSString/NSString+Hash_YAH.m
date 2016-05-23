@@ -6,12 +6,12 @@
 //  Copyright © 2016年 wangsw. All rights reserved.
 //
 
-#import "NSString+hash.h"
+#import "NSString+Hash_YAH.h"
 #import "NSData+MD5.h"
 
 #import <CommonCrypto/CommonCrypto.h>
 
-@implementation NSString (hash)
+@implementation NSString (Hash_YAH)
 
 - (NSString *)MD5
 {

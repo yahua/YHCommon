@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Contains)
+@interface NSString (Contains_YAH)
 /**
  *  @brief  判断URL中是否包含中文
  *

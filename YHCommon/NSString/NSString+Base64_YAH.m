@@ -6,10 +6,10 @@
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
 //
 
-#import "NSString+Base64.h"
+#import "NSString+Base64_YAH.h"
 #import "NSData+Base64.h"
 
-@implementation NSString (Base64)
+@implementation NSString (Base64_YAH)
 + (NSString *)stringWithBase64EncodedString:(NSString *)string
 {
     NSData *data = [NSData dataWithBase64EncodedString:string];

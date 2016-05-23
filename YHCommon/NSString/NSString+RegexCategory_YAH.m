@@ -7,9 +7,9 @@
 //  https://github.com/KevinHM
 //
 
-#import "NSString+RegexCategory.h"
+#import "NSString+RegexCategory_YAH.h"
 
-@implementation NSString (RegexCategory)
+@implementation NSString (RegexCategory_YAH)
 #pragma mark - 正则相关
 - (BOOL)isValidateByRegex:(NSString *)regex{
     NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];

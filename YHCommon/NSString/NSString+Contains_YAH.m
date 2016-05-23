@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 http://weibo.com/u/1655766025 All rights reserved.
 //
 
-#import "NSString+Contains.h"
+#import "NSString+Contains_YAH.h"
 
-@implementation NSString (Contains)
+@implementation NSString (Contains_YAH)
 
 /**
  *  @brief  判断URL中是否包含中文

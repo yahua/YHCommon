@@ -20,11 +20,12 @@
 #import "NSDate+Utilities.h"
 
 //NSString
-#import "NSString+Base64.h"
-#import "NSString+Contains.h"
-#import "NSString+RegexCategory.h"
-#import "NSString+Size.h"
-#import "NSString+hash.h"
+#import "NSString+Base64_YAH.h"
+#import "NSString+Contains_YAH.h"
+#import "NSString+RegexCategory_YAH.h"
+#import "NSString+Size_YAH.h"
+#import "NSString+Hash_YAH.h"
+#import "NSString+Transfer_YAH.h"
 
 //NSStimer
 #import "NSTimer+Addition.h"
@@ -66,7 +67,7 @@
 #import "UIViewController+Metrics.h"
 
 //YHKVOController
-#import "YHKVOController.h"
+#import "YAHKVOController.h"
 
 //YHLayout
 #import "UIView+YHLayout.h"
