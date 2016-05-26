@@ -60,6 +60,10 @@
 #import "UITextField+Blocks.h"
 #import "UITextField+Select.h"
 
+//UIView
+#warning debug使用  release最好关闭
+#import "UIView+UIInMainTread.h"
+
 //UINavigationController
 #import "UINavigationController+YHExtension.h"
 
