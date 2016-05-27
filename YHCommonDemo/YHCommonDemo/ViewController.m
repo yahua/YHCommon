@@ -9,9 +9,10 @@
 #import "ViewController.h"
 
 #import "YHCommon.h"
-#import "UIViewController+Metrics.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) UILabel *tipsLabel;
 
 @end
 
@@ -35,24 +36,33 @@
     }
     test = nil;
     
-    @weakify(self)
-    dispatch_async(dispatch_get_main_queue(), ^{
-       @strongify(self)
-        self.view.backgroundColor = [UIColor redColor];
-    });
     
-    CGFloat width  = self.width;
+    [self.view addSubview:self.tipsLabel];
     
     
-    [UIFont setStandardUIWidth:320];
-    UIFont *font = [UIFont autoFontOfSize:12.0f];
+    //[UIFont setStandardUIWidth:320];
+    //UIFont *font = [UIFont autoFontOfSize:12.0f];
     
     NSLog(@"");
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLayoutSubviews {
+    
+    [super viewDidLayoutSubviews];
+   // [self.tipsLabel leftInContainer:50 shouldResize:NO];
+}
+
+#pragma mark - Getters and Setters
+
+- (UILabel *)tipsLabel {
+    
+    if (!_tipsLabel) {
+        _tipsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, 300, 50)];
+        _tipsLabel.text = @"YAHLayout";
+        _tipsLabel.textColor = [UIColor blackColor];
+    }
+    
+    return _tipsLabel;
 }
 
 @end
