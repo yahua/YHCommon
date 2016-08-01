@@ -163,4 +163,18 @@ EOS
     ss.source_files = 'YHCommon/YAHKVOController'
   end
 
+  s.subspec 'ToolUtils' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/ToolUtils/*.h'
+    ss.source_files = 'YHCommon/ToolUtils'
+  end
+
+  s.subspec 'YAHModel' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/YAHModel/*.h'
+    ss.source_files = 'YHCommon/YAHModel'
+  end
+
 end
