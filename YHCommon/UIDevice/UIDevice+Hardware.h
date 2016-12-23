@@ -36,6 +36,11 @@ typedef enum
     IPHONE_5S_CDMA_GSM,
     IPHONE_6,
     IPHONE_6_PLUS,
+    IPHONE_6S,
+    IPHONE_6S_PLUS,
+    IPHONE_SE,
+    IPHONE_7,
+    IPHONE_7_PLUS,
 
     
     IPOD_TOUCH_1G,
@@ -43,6 +48,7 @@ typedef enum
     IPOD_TOUCH_3G,
     IPOD_TOUCH_4G,
     IPOD_TOUCH_5G,
+    IPOD_TOUCH_6G,
     
     IPAD,
     IPAD_2,
@@ -61,10 +67,20 @@ typedef enum
     IPAD_MINI_WIFI_CDMA,
     IPAD_MINI_RETINA_WIFI,
     IPAD_MINI_RETINA_WIFI_CDMA,
+    IPAD_MINI3_WIFI,
+    IPAD_MINI3_WIFI_CDMA,
+    IPAD_MINI4_WIFI,
+    IPAD_MINI4_WIFI_CDMA,
     
     IPAD_AIR_WIFI,
     IPAD_AIR_WIFI_GSM,
     IPAD_AIR_WIFI_CDMA,
+    IPAD_AIR2_WIFI,
+    IPAD_AIR2_CELLULAR,
+    IPAD_Pro_97_WIFI,
+    IPAD_Pro_97_CELLULAR,
+    IPAD_Pro_129_WIFI,
+    IPAD_Pro_129_CELLULAR,
     
     SIMULATOR
 } Hardware;
@@ -86,10 +102,6 @@ typedef enum
 
 /** This method returns YES if the current device is better than the hardware passed */
 - (BOOL)isCurrentDeviceHardwareBetterThan:(Hardware)hardware;
-
-/** This method returns the resolution for still image that can be received 
- from back camera of the current device. Resolution returned for image oriented landscape right. **/
-- (CGSize)backCameraStillImageResolutionInPixels;
 
 /** This method returns YES if the currend device is iPhone and has 4" display **/
 - (BOOL)isIphoneWith4inchDisplay;
@@ -120,4 +132,12 @@ typedef enum
 /// 获取手机硬盘总空间, 返回的是字节数
 + (long long)totalDiskSpaceBytes;
 
+//app版本
++ (NSString *)appVersion;
+// app版本号
++ (NSInteger)appVersionCode;
+//屏幕尺寸
++ (NSString *)deviceScreen;
++ (NSString *)systemNetType;
++ (NSString *)systemLanguage;
 @end

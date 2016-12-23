@@ -45,4 +45,9 @@ extern NSError *makeError(NSInteger errorCode, NSString *description);
 // 坐标转换
 + (NSArray *)transformPointArray:(NSArray *)fourPoints origPoints:(NSArray *)origPoints size:(CGSize)size tansX:(BOOL)tansX tansY:(BOOL)transY;
 
+// float转NSString最多保留两位小数
++ (NSString *)float2NSString:(float)value;
+
++ (UIViewController *)findController:(UINavigationController *)nvc class:(Class)class;
+
 @end

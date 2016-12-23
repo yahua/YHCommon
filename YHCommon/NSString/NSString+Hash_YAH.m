@@ -17,7 +17,7 @@
 {
     NSData * value;
     
-    value = [NSData dataWithBytes:[self UTF8String] length:[self length]];
+    value = [self dataUsingEncoding:NSUTF8StringEncoding];
     value = [value MD5];
     
     if ( value )
@@ -37,7 +37,7 @@
         
         NSString * result = [NSString stringWithUTF8String:(const char *)hex];
         free( hex );
-        return result;
+        return [result lowercaseString];
     }
     else
     {

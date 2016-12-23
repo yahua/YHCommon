@@ -20,6 +20,8 @@
 #import <mach/mach.h>
 #import <mach/mach_host.h>
 #import <mach/processor_info.h>
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <SystemConfiguration/SCNetworkReachability.h>
 
 @implementation UIDevice (Hardware)
 - (NSString*)hardwareString {
@@ -62,15 +64,22 @@
     if ([hardware isEqualToString:@"iPhone5,4"])    return IPHONE_5C_CDMA_GSM;
     if ([hardware isEqualToString:@"iPhone6,1"])    return IPHONE_5S;
     if ([hardware isEqualToString:@"iPhone6,2"])    return IPHONE_5S_CDMA_GSM;
-    
     if ([hardware isEqualToString:@"iPhone7,1"])    return IPHONE_6_PLUS;
     if ([hardware isEqualToString:@"iPhone7,2"])    return IPHONE_6;
+    if ([hardware isEqualToString:@"iPhone8,1"])    return IPHONE_6S;
+    if ([hardware isEqualToString:@"iPhone8,2"])    return IPHONE_6S_PLUS;
+    if ([hardware isEqualToString:@"iPhone8,4"])    return IPHONE_SE;
+    if ([hardware isEqualToString:@"iPhone9,1"])    return IPHONE_7;
+    if ([hardware isEqualToString:@"iPhone9,2"])    return IPHONE_7_PLUS;
+    if ([hardware isEqualToString:@"iPhone9,3"])    return IPHONE_7;
+    if ([hardware isEqualToString:@"iPhone9,4"])    return IPHONE_7_PLUS;
     
     if ([hardware isEqualToString:@"iPod1,1"])      return IPOD_TOUCH_1G;
     if ([hardware isEqualToString:@"iPod2,1"])      return IPOD_TOUCH_2G;
     if ([hardware isEqualToString:@"iPod3,1"])      return IPOD_TOUCH_3G;
     if ([hardware isEqualToString:@"iPod4,1"])      return IPOD_TOUCH_4G;
     if ([hardware isEqualToString:@"iPod5,1"])      return IPOD_TOUCH_5G;
+    if ([hardware isEqualToString:@"iPod7,1"])      return IPOD_TOUCH_6G;
     
     if ([hardware isEqualToString:@"iPad1,1"])      return IPAD;
     if ([hardware isEqualToString:@"iPad1,2"])      return IPAD_3G;
@@ -92,6 +101,17 @@
     if ([hardware isEqualToString:@"iPad4,3"])      return IPAD_AIR_WIFI_CDMA;
     if ([hardware isEqualToString:@"iPad4,4"])      return IPAD_MINI_RETINA_WIFI;
     if ([hardware isEqualToString:@"iPad4,5"])      return IPAD_MINI_RETINA_WIFI_CDMA;
+    if ([hardware isEqualToString:@"iPad4,7"])      return IPAD_MINI3_WIFI;
+    if ([hardware isEqualToString:@"iPad4,8"])      return IPAD_MINI3_WIFI_CDMA;
+    if ([hardware isEqualToString:@"iPad4,9"])      return IPAD_MINI3_WIFI_CDMA;
+    if ([hardware isEqualToString:@"iPad5,1"])      return IPAD_MINI4_WIFI;
+    if ([hardware isEqualToString:@"iPad5,2"])      return IPAD_MINI4_WIFI_CDMA;
+    if ([hardware isEqualToString:@"iPad5,3"])      return IPAD_AIR2_WIFI;
+    if ([hardware isEqualToString:@"iPad5,4"])      return IPAD_AIR2_CELLULAR;
+    if ([hardware isEqualToString:@"iPad6,3"])      return IPAD_Pro_97_WIFI;
+    if ([hardware isEqualToString:@"iPad6,4"])      return IPAD_Pro_97_CELLULAR;
+    if ([hardware isEqualToString:@"iPad6,7"])      return IPAD_Pro_129_WIFI;
+    if ([hardware isEqualToString:@"iPad6,8"])      return IPAD_Pro_129_CELLULAR;
     
     
     if ([hardware isEqualToString:@"i386"])         return SIMULATOR;
@@ -114,15 +134,23 @@
     if ([hardware isEqualToString:@"iPhone5,4"])    return @"iPhone 5C (Global)";
     if ([hardware isEqualToString:@"iPhone6,1"])    return @"iPhone 5S (GSM)";
     if ([hardware isEqualToString:@"iPhone6,2"])    return @"iPhone 5S (Global)";
-    
-    if ([hardware isEqualToString:@"iPhone7,1"])    return @"iPhone 6 Plus";
+    if ([hardware isEqualToString:@"iPhone7,1"])    return @"iPhone 6 PLUS";
     if ([hardware isEqualToString:@"iPhone7,2"])    return @"iPhone 6";
+    if ([hardware isEqualToString:@"iPhone8,1"])    return @"iPhone 6S";
+    if ([hardware isEqualToString:@"iPhone8,2"])    return @"iPhone 6S PLUS";
+    if ([hardware isEqualToString:@"iPhone8,4"])    return @"iPhone SE";
+    if ([hardware isEqualToString:@"iPhone9,1"])    return @"iPhone 7";
+    if ([hardware isEqualToString:@"iPhone9,2"])    return @"iPhone 7 PLUS";
+    if ([hardware isEqualToString:@"iPhone9,3"])    return @"iPhone 7";
+    if ([hardware isEqualToString:@"iPhone9,4"])    return @"iPhone 7 PLUS";
+    
     
     if ([hardware isEqualToString:@"iPod1,1"])      return @"iPod Touch (1 Gen)";
     if ([hardware isEqualToString:@"iPod2,1"])      return @"iPod Touch (2 Gen)";
     if ([hardware isEqualToString:@"iPod3,1"])      return @"iPod Touch (3 Gen)";
     if ([hardware isEqualToString:@"iPod4,1"])      return @"iPod Touch (4 Gen)";
     if ([hardware isEqualToString:@"iPod5,1"])      return @"iPod Touch (5 Gen)";
+    if ([hardware isEqualToString:@"iPod7,1"])      return @"iPod Touch (6 Gen)";
     
     if ([hardware isEqualToString:@"iPad1,1"])      return @"iPad (WiFi)";
     if ([hardware isEqualToString:@"iPad1,2"])      return @"iPad 3G";
@@ -144,6 +172,18 @@
     if ([hardware isEqualToString:@"iPad4,3"])      return @"iPad Air (WiFi+CDMA)";
     if ([hardware isEqualToString:@"iPad4,4"])      return @"iPad Mini Retina (WiFi)";
     if ([hardware isEqualToString:@"iPad4,5"])      return @"iPad Mini Retina (WiFi+CDMA)";
+    if ([hardware isEqualToString:@"iPad4,7"])      return @"iPad Mini3 (WiFi)";
+    if ([hardware isEqualToString:@"iPad4,8"])      return @"iPad Mini3 (GSM)";
+    if ([hardware isEqualToString:@"iPad4,9"])      return @"iPad Mini3 (CDMA)";
+    if ([hardware isEqualToString:@"iPad5,1"])      return @"iPad Mini4 (WiFi)";
+    if ([hardware isEqualToString:@"iPad5,2"])      return @"iPad Mini4 (CDMA)";
+    if ([hardware isEqualToString:@"iPad5,3"])      return @"iPad Air2 (WiFi)";
+    if ([hardware isEqualToString:@"iPad5,4"])      return @"iPad Air2 (WiFi+GSM)";
+    if ([hardware isEqualToString:@"iPad6,3"])      return @"iPad Pro 9.7 (WiFi)";
+    if ([hardware isEqualToString:@"iPad6,4"])      return @"iPad Pro 9.7 (WiFi+GSM)";
+    if ([hardware isEqualToString:@"iPad6,7"])      return @"iPad Pro 12.9 (WiFi)";
+    if ([hardware isEqualToString:@"iPad6,8"])      return @"iPad Pro 12.9 (WiFi+GSM)";
+    
     if ([hardware isEqualToString:@"i386"])         return @"Simulator";
     if ([hardware isEqualToString:@"x86_64"])       return @"Simulator";
     
@@ -171,12 +211,22 @@
     if ([hardware isEqualToString:@"iPhone5,4"])    return @"iPhone 5C";
     if ([hardware isEqualToString:@"iPhone6,1"])    return @"iPhone 5S";
     if ([hardware isEqualToString:@"iPhone6,2"])    return @"iPhone 5S";
+    if ([hardware isEqualToString:@"iPhone7,1"])    return @"iPhone 6 PLUS";
+    if ([hardware isEqualToString:@"iPhone7,2"])    return @"iPhone 6";
+    if ([hardware isEqualToString:@"iPhone8,1"])    return @"iPhone 6S";
+    if ([hardware isEqualToString:@"iPhone8,2"])    return @"iPhone 6S PLUS";
+    if ([hardware isEqualToString:@"iPhone8,4"])    return @"iPhone SE";
+    if ([hardware isEqualToString:@"iPhone9,1"])    return @"iPhone 7";
+    if ([hardware isEqualToString:@"iPhone9,2"])    return @"iPhone 7 PLUS";
+    if ([hardware isEqualToString:@"iPhone9,3"])    return @"iPhone 7";
+    if ([hardware isEqualToString:@"iPhone9,4"])    return @"iPhone 7 PLUS";
     
     if ([hardware isEqualToString:@"iPod1,1"])      return @"iPod Touch (1 Gen)";
     if ([hardware isEqualToString:@"iPod2,1"])      return @"iPod Touch (2 Gen)";
     if ([hardware isEqualToString:@"iPod3,1"])      return @"iPod Touch (3 Gen)";
     if ([hardware isEqualToString:@"iPod4,1"])      return @"iPod Touch (4 Gen)";
     if ([hardware isEqualToString:@"iPod5,1"])      return @"iPod Touch (5 Gen)";
+    if ([hardware isEqualToString:@"iPod7,1"])      return @"iPod Touch (6 Gen)";
     
     if ([hardware isEqualToString:@"iPad1,1"])      return @"iPad";
     if ([hardware isEqualToString:@"iPad1,2"])      return @"iPad";
@@ -198,6 +248,17 @@
     if ([hardware isEqualToString:@"iPad4,3"])      return @"iPad Air";
     if ([hardware isEqualToString:@"iPad4,4"])      return @"iPad Mini Retina";
     if ([hardware isEqualToString:@"iPad4,5"])      return @"iPad Mini Retina";
+    if ([hardware isEqualToString:@"iPad4,7"])      return @"iPad Mini3";
+    if ([hardware isEqualToString:@"iPad4,8"])      return @"iPad Mini3";
+    if ([hardware isEqualToString:@"iPad4,9"])      return @"iPad Mini3";
+    if ([hardware isEqualToString:@"iPad5,1"])      return @"iPad Mini4";
+    if ([hardware isEqualToString:@"iPad5,2"])      return @"iPad Mini4";
+    if ([hardware isEqualToString:@"iPad5,3"])      return @"iPad Air2";
+    if ([hardware isEqualToString:@"iPad5,4"])      return @"iPad Air2";
+    if ([hardware isEqualToString:@"iPad6,3"])      return @"iPad Pro 9.7";
+    if ([hardware isEqualToString:@"iPad6,4"])      return @"iPad Pro 9.7";
+    if ([hardware isEqualToString:@"iPad6,7"])      return @"iPad Pro 12.9";
+    if ([hardware isEqualToString:@"iPad6,8"])      return @"iPad Pro 12.9";
     
     if ([hardware isEqualToString:@"i386"])         return @"Simulator";
     if ([hardware isEqualToString:@"x86_64"])       return @"Simulator";
@@ -214,6 +275,7 @@
 
 
 - (float)hardwareNumber:(Hardware)hardware {
+    
     switch (hardware) {
         case IPHONE_2G: return 1.1f;
         case IPHONE_3G: return 1.2f;
@@ -227,15 +289,20 @@
         case IPHONE_5C_CDMA_GSM:    return 5.4f;
         case IPHONE_5S:    return 6.1f;
         case IPHONE_5S_CDMA_GSM:    return 6.2f;
-        
         case IPHONE_6:         return 7.2f;
         case IPHONE_6_PLUS:    return 7.1f;
+        case IPHONE_SE:         return 8.4f;
+        case IPHONE_6S:    return 8.1f;
+        case IPHONE_6S_PLUS:         return 8.2f;
+        case IPHONE_7:         return 9.1f;
+        case IPHONE_7_PLUS:    return 9.2f;
             
         case IPOD_TOUCH_1G:    return 1.1f;
         case IPOD_TOUCH_2G:    return 2.1f;
         case IPOD_TOUCH_3G:    return 3.1f;
         case IPOD_TOUCH_4G:    return 4.1f;
         case IPOD_TOUCH_5G:    return 5.1f;
+        case IPOD_TOUCH_6G:    return 7.1f;
             
         case IPAD:    return 1.1f;
         case IPAD_3G:    return 1.2f;
@@ -256,6 +323,16 @@
         case IPAD_AIR_WIFI_CDMA:    return 4.3f;
         case IPAD_MINI_RETINA_WIFI:    return 4.4f;
         case IPAD_MINI_RETINA_WIFI_CDMA:    return 4.5f;
+        case IPAD_MINI3_WIFI:    return 4.7f;
+        case IPAD_MINI3_WIFI_CDMA:    return 4.8f;
+        case IPAD_MINI4_WIFI:    return 5.1f;
+        case IPAD_MINI4_WIFI_CDMA:    return 5.2f;
+        case IPAD_AIR2_WIFI:    return 5.3f;
+        case IPAD_AIR2_CELLULAR:    return 5.4f;
+        case IPAD_Pro_97_WIFI:    return 6.3f;
+        case IPAD_Pro_97_CELLULAR:    return 6.4f;
+        case IPAD_Pro_129_WIFI:    return 6.7f;
+        case IPAD_Pro_129_CELLULAR:    return 6.8f;
             
         case SIMULATOR:    return 100.0f;
         case NOT_AVAILABLE:    return 200.0f;
@@ -267,60 +344,6 @@
     float otherHardware = [self hardwareNumber:hardware];
     float currentHardware = [self hardwareNumber:[self hardware]];
     return currentHardware >= otherHardware;
-}
-
-- (CGSize)backCameraStillImageResolutionInPixels
-{
-    switch ([self hardware]) {
-        case IPHONE_2G:
-        case IPHONE_3G:
-            return CGSizeMake(1600, 1200);
-            break;
-        case IPHONE_3GS:
-            return CGSizeMake(2048, 1536);
-            break;
-        case IPHONE_4:
-        case IPHONE_4_CDMA:
-        case IPAD_3_WIFI:
-        case IPAD_3_WIFI_CDMA:
-        case IPAD_3:
-        case IPAD_4_WIFI:
-        case IPAD_4:
-        case IPAD_4_GSM_CDMA:
-            return CGSizeMake(2592, 1936);
-            break;
-        case IPHONE_4S:
-        case IPHONE_5:
-        case IPHONE_5_CDMA_GSM:
-        case IPHONE_5C:
-        case IPHONE_5C_CDMA_GSM:
-            return CGSizeMake(3264, 2448);
-            break;
-            
-        case IPOD_TOUCH_4G:
-            return CGSizeMake(960, 720);
-            break;
-        case IPOD_TOUCH_5G:
-            return CGSizeMake(2440, 1605);
-            break;
-            
-        case IPAD_2_WIFI:
-        case IPAD_2:
-        case IPAD_2_CDMA:
-            return CGSizeMake(872, 720);
-            break;
-            
-        case IPAD_MINI_WIFI:
-        case IPAD_MINI:
-        case IPAD_MINI_WIFI_CDMA:
-            return CGSizeMake(1820, 1304);
-            break;
-        default:
-            NSLog(@"We have no resolution for your device's camera listed in this category. Please, make photo with back camera of your device, get its resolution in pixels (via Preview Cmd+I for example) and add a comment to this repository on GitHub.com in format Device = Hpx x Wpx.");
-            NSLog(@"Your device is: %@", [self hardwareDescription]);
-            break;
-    }
-    return CGSizeZero;
 }
 
 - (BOOL)isIphoneWith4inchDisplay
@@ -459,5 +482,136 @@
     }
     return totalspace;
 }
+
+//版本
++ (NSString *)appVersion
+{
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    //NSString *name = [infoDictionary objectForKey:@"CFBundleName"];
+    NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    return version;
+}
+
+// 版本号
++ (NSInteger)appVersionCode
+{
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
+    
+    return build ? [build integerValue] : 0;
+}
+
++ (NSString *)deviceScreen {
+    
+    CGRect rect_screen = [[UIScreen mainScreen] bounds];
+    return [NSString stringWithFormat:@"%.1f*%.1f", rect_screen.size.width, rect_screen.size.height];
+}
+
++ (NSString *)systemNetType {
+    
+    NSString *strNetworkType = @"";
+    
+    //创建零地址，0.0.0.0的地址表示查询本机的网络连接状态
+    struct sockaddr_storage zeroAddress;
+    
+    bzero(&zeroAddress, sizeof(zeroAddress));
+    zeroAddress.ss_len = sizeof(zeroAddress);
+    zeroAddress.ss_family = AF_INET;
+    
+    // Recover reachability flags
+    SCNetworkReachabilityRef defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(NULL, (struct sockaddr *)&zeroAddress);
+    SCNetworkReachabilityFlags flags;
+    
+    //获得连接的标志
+    BOOL didRetrieveFlags = SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags);
+    CFRelease(defaultRouteReachability);
+    
+    //如果不能获取连接标志，则不能连接网络，直接返回
+    if (!didRetrieveFlags)
+    {
+        return strNetworkType;
+    }
+    
+    
+    if ((flags & kSCNetworkReachabilityFlagsConnectionRequired) == 0)
+    {
+        // if target host is reachable and no connection is required
+        // then we'll assume (for now) that your on Wi-Fi
+        strNetworkType = @"WIFI";
+    }
+    
+    if (
+        ((flags & kSCNetworkReachabilityFlagsConnectionOnDemand ) != 0) ||
+        (flags & kSCNetworkReachabilityFlagsConnectionOnTraffic) != 0
+        )
+    {
+        // ... and the connection is on-demand (or on-traffic) if the
+        // calling application is using the CFSocketStream or higher APIs
+        if ((flags & kSCNetworkReachabilityFlagsInterventionRequired) == 0)
+        {
+            // ... and no [user] intervention is needed
+            strNetworkType = @"WIFI";
+        }
+    }
+    
+    if ((flags & kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN)
+    {
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+        {
+            CTTelephonyNetworkInfo * info = [[CTTelephonyNetworkInfo alloc] init];
+            NSString *currentRadioAccessTechnology = info.currentRadioAccessTechnology;
+            
+            if (currentRadioAccessTechnology)
+            {
+                if ([currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyLTE])
+                {
+                    strNetworkType =  @"4G";
+                }
+                else if ([currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyEdge] || [currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyGPRS])
+                {
+                    strNetworkType =  @"2G";
+                }
+                else
+                {
+                    strNetworkType =  @"3G";
+                }
+            }
+        }
+        else
+        {
+            if((flags & kSCNetworkReachabilityFlagsReachable) == kSCNetworkReachabilityFlagsReachable)
+            {
+                if ((flags & kSCNetworkReachabilityFlagsTransientConnection) == kSCNetworkReachabilityFlagsTransientConnection)
+                {
+                    if((flags & kSCNetworkReachabilityFlagsConnectionRequired) == kSCNetworkReachabilityFlagsConnectionRequired)
+                    {
+                        strNetworkType = @"2G";
+                    }
+                    else
+                    {
+                        strNetworkType = @"3G";
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    if ([strNetworkType isEqualToString:@""]) {
+        strNetworkType = @"WWAN";
+    }
+    
+    return strNetworkType;
+}
+
++ (NSString *)systemLanguage {
+    
+    // NSArray *languages = [NSLocale preferredLanguages];
+    NSArray *languages = [[NSUserDefaults standardUserDefaults] valueForKey:@"AppleLanguages"];
+    NSString *currentLanguage = [languages objectAtIndex:0];
+    return currentLanguage;
+}
+
+#pragma mark - Private
 
 @end

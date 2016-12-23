@@ -95,9 +95,14 @@
  */
 - (BOOL)isMobileNumberClassification;
 /**
- *  手机号有效性
+ *  大陆手机号有效性
  */
 - (BOOL)isMobileNumber;
+
+/**
+ *  香港手机号有效性
+ */
+- (BOOL)isHongKongMobileNumber;
 
 /**
  *  邮箱的有效性
@@ -109,6 +114,18 @@
  *
  */
 - (BOOL)simpleVerifyIdentityCardNum;
+
+/**
+ *  判断是非有特殊符号
+ *
+ */
+- (BOOL)isSpecialString;
+
+/**
+ *  是否包含Emoji
+ *
+ */
+- (BOOL)isContainsEmoji;
 
 /**
  *  精确的身份证号码有效性检测

@@ -43,6 +43,11 @@
 		197BCE1C1C916BAA00773DF2 /* UINavigationController+YHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 197BCE1B1C916BAA00773DF2 /* UINavigationController+YHExtension.m */; };
 		198183521CF2AAF000C8E899 /* NSString+Transfer_YAH.m in Sources */ = {isa = PBXBuildFile; fileRef = 198183511CF2AAF000C8E899 /* NSString+Transfer_YAH.m */; };
 		198183561CF2D40600C8E899 /* YAHKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 198183551CF2D40600C8E899 /* YAHKVOController.m */; };
+		2C8A39E61E0D2FC100370149 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8A39E51E0D2FC100370149 /* Utility.m */; };
+		2C8A39EA1E0D2FDC00370149 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8A39E91E0D2FDC00370149 /* UIActionSheet+Blocks.m */; };
+		2C8A39ED1E0D30AA00370149 /* UINavigationController+MethodExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8A39EC1E0D30AA00370149 /* UINavigationController+MethodExt.m */; };
+		2C8A39F01E0D30EE00370149 /* UIImage+RTTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8A39EF1E0D30EE00370149 /* UIImage+RTTint.m */; };
+		2C8A39F41E0D34D200370149 /* NSObject+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8A39F31E0D34D200370149 /* NSObject+Block.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +144,16 @@
 		198183541CF2D40600C8E899 /* YAHKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAHKVOController.h; sourceTree = "<group>"; };
 		198183551CF2D40600C8E899 /* YAHKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAHKVOController.m; sourceTree = "<group>"; };
 		19FF5FA41C8858A200F67164 /* YHCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHCommon.h; sourceTree = "<group>"; };
+		2C8A39E41E0D2FC100370149 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		2C8A39E51E0D2FC100370149 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		2C8A39E81E0D2FDC00370149 /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		2C8A39E91E0D2FDC00370149 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		2C8A39EB1E0D30AA00370149 /* UINavigationController+MethodExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MethodExt.h"; sourceTree = "<group>"; };
+		2C8A39EC1E0D30AA00370149 /* UINavigationController+MethodExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MethodExt.m"; sourceTree = "<group>"; };
+		2C8A39EE1E0D30EE00370149 /* UIImage+RTTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RTTint.h"; sourceTree = "<group>"; };
+		2C8A39EF1E0D30EE00370149 /* UIImage+RTTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RTTint.m"; sourceTree = "<group>"; };
+		2C8A39F21E0D34D200370149 /* NSObject+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Block.h"; sourceTree = "<group>"; };
+		2C8A39F31E0D34D200370149 /* NSObject+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Block.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +367,8 @@
 		196221D61C8927A70056384E /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				2C8A39EE1E0D30EE00370149 /* UIImage+RTTint.h */,
+				2C8A39EF1E0D30EE00370149 /* UIImage+RTTint.m */,
 				196221D71C8927A70056384E /* UIImage+Blur.h */,
 				196221D81C8927A70056384E /* UIImage+Blur.m */,
 				196221D91C8927A70056384E /* UIImage+Color.h */,
@@ -371,6 +388,8 @@
 		197BCE191C916B5500773DF2 /* UINavigationController */ = {
 			isa = PBXGroup;
 			children = (
+				2C8A39EB1E0D30AA00370149 /* UINavigationController+MethodExt.h */,
+				2C8A39EC1E0D30AA00370149 /* UINavigationController+MethodExt.m */,
 				197BCE1A1C916BAA00773DF2 /* UINavigationController+YHExtension.h */,
 				197BCE1B1C916BAA00773DF2 /* UINavigationController+YHExtension.m */,
 			);
@@ -389,6 +408,9 @@
 		19FF5F9F1C88588E00F67164 /* YHCommon */ = {
 			isa = PBXGroup;
 			children = (
+				2C8A39F11E0D34D200370149 /* NSObject */,
+				2C8A39E71E0D2FDC00370149 /* UIActionSheet */,
+				2C8A39E31E0D2FC100370149 /* ToolUtils */,
 				195798791C97D84600CDDDD6 /* extobjc */,
 				197BCE191C916B5500773DF2 /* UINavigationController */,
 				194A3A6F1C8E794D002AFECD /* NSTimer */,
@@ -407,6 +429,33 @@
 			);
 			name = YHCommon;
 			path = ../../YHCommon;
+			sourceTree = "<group>";
+		};
+		2C8A39E31E0D2FC100370149 /* ToolUtils */ = {
+			isa = PBXGroup;
+			children = (
+				2C8A39E41E0D2FC100370149 /* Utility.h */,
+				2C8A39E51E0D2FC100370149 /* Utility.m */,
+			);
+			path = ToolUtils;
+			sourceTree = "<group>";
+		};
+		2C8A39E71E0D2FDC00370149 /* UIActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				2C8A39E81E0D2FDC00370149 /* UIActionSheet+Blocks.h */,
+				2C8A39E91E0D2FDC00370149 /* UIActionSheet+Blocks.m */,
+			);
+			path = UIActionSheet;
+			sourceTree = "<group>";
+		};
+		2C8A39F11E0D34D200370149 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				2C8A39F21E0D34D200370149 /* NSObject+Block.h */,
+				2C8A39F31E0D34D200370149 /* NSObject+Block.m */,
+			);
+			path = NSObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,6 +525,8 @@
 				TargetAttributes = {
 					194F79D71C882A6F00599CCB = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 28T9NSVTY8;
+						ProvisioningStyle = Manual;
 					};
 					194F79F01C882A6F00599CCB = {
 						CreatedOnToolsVersion = 7.2;
@@ -546,12 +597,14 @@
 				195798841C97D84600CDDDD6 /* EXTScope.m in Sources */,
 				195AB0E11C89305C000E35AB /* NSString+Hash_YAH.m in Sources */,
 				196221EA1C8927A70056384E /* UIColor+HEX.m in Sources */,
+				2C8A39EA1E0D2FDC00370149 /* UIActionSheet+Blocks.m in Sources */,
 				194F79E31C882A6F00599CCB /* ViewController.m in Sources */,
 				196221E41C8927A70056384E /* NSDate+Utilities.m in Sources */,
 				196221E81C8927A70056384E /* NSString+Size_YAH.m in Sources */,
 				196221E31C8927A70056384E /* NSData+Base64.m in Sources */,
 				194F79E01C882A6F00599CCB /* AppDelegate.m in Sources */,
 				196221EF1C8927A70056384E /* UIImage+FX.m in Sources */,
+				2C8A39ED1E0D30AA00370149 /* UINavigationController+MethodExt.m in Sources */,
 				194A3A871C8E794D002AFECD /* UITextField+Select.m in Sources */,
 				196221EC1C8927A70056384E /* UIImage+Blur.m in Sources */,
 				198183561CF2D40600C8E899 /* YAHKVOController.m in Sources */,
@@ -563,7 +616,10 @@
 				194A3A811C8E794D002AFECD /* NSTimer+Addition.m in Sources */,
 				196221E51C8927A70056384E /* NSString+Base64_YAH.m in Sources */,
 				196221ED1C8927A70056384E /* UIImage+Color.m in Sources */,
+				2C8A39E61E0D2FC100370149 /* Utility.m in Sources */,
+				2C8A39F01E0D30EE00370149 /* UIImage+RTTint.m in Sources */,
 				196221EB1C8927A70056384E /* UIDevice+Hardware.m in Sources */,
+				2C8A39F41E0D34D200370149 /* NSObject+Block.m in Sources */,
 				194A3A851C8E794D002AFECD /* UILabel+SuggestSize.m in Sources */,
 				194A3A831C8E794D002AFECD /* UIAlertView+Block.m in Sources */,
 				194A3A861C8E794D002AFECD /* UITextField+Blocks.m in Sources */,
@@ -710,11 +766,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 28T9NSVTY8;
 				INFOPLIST_FILE = YHCommonDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nd.YHCommonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f115e63d-edbf-4189-9706-c45d99313789";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS development";
 			};
 			name = Debug;
 		};
@@ -722,11 +781,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 28T9NSVTY8;
 				INFOPLIST_FILE = YHCommonDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nd.YHCommonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f115e63d-edbf-4189-9706-c45d99313789";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS development";
 			};
 			name = Release;
 		};

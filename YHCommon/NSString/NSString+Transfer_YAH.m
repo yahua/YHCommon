@@ -224,36 +224,47 @@ static char firstLetterArray[HANZI_COUNT] =
 "whxgzxwznnqzjzjjqjccchykxbzszcnjtllcqxynjnckycynccqnxyewyczdcjycchyjlbtzyycqwlpgpyllgktltlgkgqbgychj"
 "xy";
 
-static char pinyinFirstLetter(unsigned short hanzi)
-{
-    int index = hanzi - HANZI_START;
-    if (index >= 0&& index <= HANZI_COUNT)
-    {
-        return firstLetterArray[index];
-    }
-    else
-    {
-        return hanzi;
-    }
-}
-
-
 @implementation NSString (Transfer_YAH)
 
 - (NSString *)firstCharPinyinFirstLetter {
     
-    if ([NSString stringIsNullOrEmpty:self]) {
+    NSString *words = [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if (words.length == 0) {
         return nil;
     }
-    NSString *firstName = [self substringToIndex:1];
-    if (![firstName isValidChinese]) {
-        return nil;
+    NSString *result = nil;
+    unichar firstLetter = [words characterAtIndex:0];
+    
+    int index = firstLetter - HANZI_START;
+    if (index >= 0 && index <= HANZI_COUNT) {
+        result = [NSString stringWithFormat:@"%c", firstLetterArray[index]];
+    }
+    else if ((firstLetter >= 'a' && firstLetter <= 'z')
+             || (firstLetter >= 'A' && firstLetter <= 'Z')) {
+        result = [NSString stringWithFormat:@"%c", firstLetter];
+    } else {
+        result = @"#";
+    }
+    return [result uppercaseString];
+}
+
+// 校正手机号码
+- (NSString *)adjustmentPhone
+{
+    NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"[^0-9]" options:0 error:nil];
+    NSString *adjustPhone = [regularExpression stringByReplacingMatchesInString:self options:0 range:NSMakeRange(0, self.length) withTemplate:@""];
+    NSString *result = adjustPhone;
+    
+    if (adjustPhone.length > 11) {
+        result = [adjustPhone substringFromIndex:(adjustPhone.length - 11)];
     }
     
-    unsigned short hanzi = [firstName characterAtIndex:0];
-    char letter = pinyinFirstLetter(hanzi);
-    NSString *letString = [[NSString stringWithFormat:@"%c", letter] uppercaseString];
-    return letString;
+    return result;
+}
+
+- (NSString *)removeSpace {
+    
+    return [[self stringByReplacingOccurrencesOfString:@" " withString:@""] copy];
 }
 
 @end

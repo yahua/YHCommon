@@ -21,7 +21,7 @@ NSError *makeError(NSInteger errorCode, NSString *description)
         desc = LS(@"ErrorDefault");
     }
     
-    return [[NSError alloc] initWithDomain:@"T-go" code:errorCode userInfo:@{NSLocalizedDescriptionKey: desc}];
+    return [[NSError alloc] initWithDomain:desc code:errorCode userInfo:nil];
 }
 
 + (ScreenSizeMode)getScreenSizeMode
@@ -55,12 +55,8 @@ NSError *makeError(NSInteger errorCode, NSString *description)
 {
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     //NSString *name = [infoDictionary objectForKey:@"CFBundleName"];
-    NSString *name = @"版本";
     NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
-//    NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
-//    NSString *label = [NSString stringWithFormat:@"%@ v%@.%@", name, version, build];
-    NSString *label = [NSString stringWithFormat:@"%@ v%@", name, version];
-    return label;
+    return version;
 }
 
 // 版本号
@@ -88,8 +84,8 @@ NSError *makeError(NSInteger errorCode, NSString *description)
     NSDate *myDate = date;
     NSDate *nowDate = [NSDate date];
 
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    unsigned int unitFlags = NSYearCalendarUnit;
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    unsigned int unitFlags = NSCalendarUnitYear;
     
     
     NSDateComponents *comps = [calendar components:unitFlags fromDate:myDate toDate:nowDate options:0];
@@ -189,31 +185,31 @@ NSError *makeError(NSInteger errorCode, NSString *description)
 {
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:dateValue];
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *comp = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSWeekdayCalendarUnit fromDate:date];
+    NSDateComponents *comp = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitWeekday fromDate:date];
     
     // 1(星期天) 2(星期一) 3(星期二) 4(星期三) 5(星期四) 6(星期五) 7(星期六)
     NSInteger weekDay = [comp weekday];
     switch (weekDay) {
         case 2:
-            return LS(@"周一");
+            return LS(@"week.label.mon");
             
         case 3:
-            return LS(@"周二");
+            return LS(@"week.label.tues");
             
         case 4:
-            return LS(@"周三");
+            return LS(@"week.label.wed");
             
         case 5:
-            return LS(@"周四");
+            return LS(@"week.label.thur");
             
         case 6:
-            return LS(@"周五");
+            return LS(@"week.label.fri");
             
         case 7:
-            return LS(@"周六");
+            return LS(@"week.label.sat");
             
         case 1:
-            return LS(@"周日");
+            return LS(@"week.label.sun");
             
         default:
             break;
@@ -226,9 +222,9 @@ NSError *makeError(NSInteger errorCode, NSString *description)
 // 获取当月的天数
 + (NSInteger)getNumberOfDaysInMonth:(NSDate *)date
 {
-    NSCalendar * calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar]; // 指定日历的算法
-    NSRange range = [calendar rangeOfUnit:NSDayCalendarUnit
-                                   inUnit: NSMonthCalendarUnit
+    NSCalendar * calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian]; // 指定日历的算法
+    NSRange range = [calendar rangeOfUnit:NSCalendarUnitDay
+                                   inUnit: NSCalendarUnitMonth
                                   forDate:date];
     return range.length;
 }
@@ -334,7 +330,7 @@ NSError *makeError(NSInteger errorCode, NSString *description)
     }
     
     double rxDist = origSize.width / tempTSize.width * tempTXDist;
-    double ryDist = origSize.height / tempTSize.height * tempTYDist;
+    double  ryDist = origSize.height / tempTSize.height * tempTYDist;
     
     if (tansX) {
         rxDist = origSize.width - rxDist;
@@ -346,6 +342,35 @@ NSError *makeError(NSInteger errorCode, NSString *description)
     
     CGPoint rPoint = CGPointMake((int)floor(rxDist), (int)floor(ryDist));
     return [NSValue valueWithCGPoint:rPoint];
+}
+
++ (NSString *)float2NSString:(float)value
+{
+    if (value>=0.1) {
+        return [NSString stringWithFormat:@"%.1f", value];
+        
+    } else if (value<0.1 && value>=0.01) {
+        return [NSString stringWithFormat:@"%.2f", value];
+    } else {
+        return @"0";
+    }
+}
+
++ (UIViewController *)findController:(UINavigationController *)nvc class:(Class)class
+{
+    __block UIViewController *retController = nil;
+    if (nvc)
+    {
+        [nvc.childViewControllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+         {
+             if ([obj isKindOfClass:class])
+             {
+                 retController = obj;
+                 *stop = YES;
+             }
+         }];
+    }
+    return retController;
 }
 
 @end

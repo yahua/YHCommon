@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YHCommon"
-  s.version      = "0.2.2"
+  s.version      = "0.3"
   s.summary      = "App common file of YHCommon."
 
   s.description  = <<-DESC
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.requires_arc = true
 
-  s.source       = { :git => "https://github.com/yahua/YHCommon.git", :tag => "0.2.2" }
+  s.source       = { :git => "https://github.com/yahua/YHCommon.git", :tag => "0.3" }
 
 
 
@@ -170,11 +170,18 @@ EOS
     ss.source_files = 'YHCommon/ToolUtils'
   end
 
-  s.subspec 'YAHModel' do |ss|
+  s.subspec 'UIActionSheet' do |ss|
     ss.ios.deployment_target = '7.0'
 
-    ss.public_header_files = 'YHCommon/YAHModel/*.h'
-    ss.source_files = 'YHCommon/YAHModel'
+    ss.public_header_files = 'YHCommon/UIActionSheet/*.h'
+    ss.source_files = 'YHCommon/UIActionSheet'
+  end
+
+  s.subspec 'NSObject' do |ss|
+    ss.ios.deployment_target = '7.0'
+
+    ss.public_header_files = 'YHCommon/NSObject/*.h'
+    ss.source_files = 'YHCommon/NSObject'
   end
 
 end

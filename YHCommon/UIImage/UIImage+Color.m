@@ -62,6 +62,7 @@
                                                  | kCGBitmapByteOrder32Big);
     if (!context) {
         free(rawData);
+        CGColorSpaceRelease(colorSpace);
         return nil;
     }
     CGColorSpaceRelease(colorSpace);
