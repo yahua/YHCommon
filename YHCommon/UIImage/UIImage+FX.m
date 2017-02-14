@@ -423,4 +423,36 @@
 	return mask;
 }
 
++ (UIImage *)getImageFromImage:(UIImage*)superImage subImageRect:(CGRect)subImageRect {
+    
+    if (superImage) {
+        CGSize subImageSize = subImageRect.size;
+        
+        CGImageRef imageRef = superImage.CGImage;
+        
+        CGImageRef subImageRef = CGImageCreateWithImageInRect(imageRef, subImageRect);
+        
+        UIGraphicsBeginImageContext(subImageSize);
+        
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        CGContextTranslateCTM(context, 0.0, subImageSize.height);
+        CGContextScaleCTM(context, 1.0, -1.0);
+        
+        // Draw the original image to the context
+        CGContextSetBlendMode(context, kCGBlendModeCopy);
+        CGContextDrawImage(context, CGRectMake(0, 0, subImageSize.width, subImageSize.height), subImageRef);
+        
+        // Retrieve the UIImage from the current context
+        UIImage *imageOut = UIGraphicsGetImageFromCurrentImageContext();
+        
+        CGImageRelease(subImageRef);
+        UIGraphicsEndImageContext();
+        
+        return imageOut;
+    }else{
+        return nil;
+    }
+}
+
 @end

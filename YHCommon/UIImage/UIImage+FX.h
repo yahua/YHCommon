@@ -52,5 +52,11 @@
 
 - (UIImage *)maskImageFromImageAlpha;
 
+/**
+ 裁剪到原图片到相应的尺寸
+ @param superImage   要裁剪的原图
+ @param subImageRect 需要裁剪frame，包含起始在原图的起始位置
+ */
++ (UIImage *)getImageFromImage:(UIImage*)superImage subImageRect:(CGRect)subImageRect;
 
 @end
