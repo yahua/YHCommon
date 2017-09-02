@@ -189,6 +189,12 @@
     return [self isValidateByRegex:chineseRegex];
 }
 
+- (BOOL)isPureInt {
+    NSScanner* scan = [NSScanner scannerWithString:self];
+    int val;
+    return[scan scanInt:&val] && [scan isAtEnd];
+}
+
 - (BOOL)isValidPostalcode {
     NSString *postalRegex = @"^[0-8]\\d{5}(?!\\d)$";
     return [self isValidateByRegex:postalRegex];

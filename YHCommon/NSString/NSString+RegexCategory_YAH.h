@@ -165,6 +165,11 @@
 - (BOOL)isValidChinese;
 
 /**
+ *  纯数字
+ */
+- (BOOL)isPureInt;
+
+/**
  *  邮政编码
  */
 - (BOOL)isValidPostalcode;
