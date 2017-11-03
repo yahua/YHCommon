@@ -48,6 +48,6 @@ extern NSError *makeError(NSInteger errorCode, NSString *description);
 // float转NSString最多保留两位小数
 + (NSString *)float2NSString:(float)value;
 
-+ (UIViewController *)findController:(UINavigationController *)nvc class:(Class)class;
++ (UIViewController *)findController:(UINavigationController *)nvc class:(Class)aClass;
 
 @end

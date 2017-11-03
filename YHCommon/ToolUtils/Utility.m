@@ -356,14 +356,14 @@ NSError *makeError(NSInteger errorCode, NSString *description)
     }
 }
 
-+ (UIViewController *)findController:(UINavigationController *)nvc class:(Class)class
++ (UIViewController *)findController:(UINavigationController *)nvc class:(Class)aClass
 {
     __block UIViewController *retController = nil;
     if (nvc)
     {
         [nvc.childViewControllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
          {
-             if ([obj isKindOfClass:class])
+             if ([obj isKindOfClass:aClass])
              {
                  retController = obj;
                  *stop = YES;
