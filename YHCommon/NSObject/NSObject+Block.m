@@ -10,7 +10,7 @@
 
 @implementation NSObject (Block)
 
-- (void)performBlock:(void(^)(void))block delay:(NSInteger)delay; {
+- (void)performBlock:(void(^)(void))block delay:(NSTimeInterval)delay; {
     
      block = [block copy];
      [self performSelector:@selector(fireBlockAfterDelay:)

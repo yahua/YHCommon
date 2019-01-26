@@ -10,6 +10,12 @@
 
 @interface NSObject (Block)
 
-- (void)performBlock:(void(^)(void))block delay:(NSInteger)delay;
+/**
+ 延时调用
+
+ @param block 时间到了的回调block
+ @param delay 延时时长
+ */
+- (void)performBlock:(void(^)(void))block delay:(NSTimeInterval)delay;
 
 @end
